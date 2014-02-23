@@ -1,0 +1,131 @@
+[
+    {
+        "pk": 1, 
+        "model": "real_estate.property", 
+        "fields": {
+            "category": "H", 
+            "timestamp": "2013-12-23T18:24:16.001Z", 
+            "price": 100, 
+            "is_active": true, 
+            "address": "Rua A", 
+            "email": "foo@bar.com"
+        }
+    },
+
+    {
+        "pk": 2, 
+        "model": "real_estate.property", 
+        "fields": {
+            "category": "h", 
+            "timestamp": "2013-12-23T18:24:16.002Z", 
+            "price": 150, 
+            "is_active": true, 
+            "address": "Rua B", 
+            "email": "foo@bar.com"
+        }
+    },
+
+    {
+        "pk": 3, 
+        "model": "real_estate.property", 
+        "fields": {
+            "category": "H", 
+            "timestamp": "2013-12-23T18:24:16.003Z", 
+            "price": 200, 
+            "is_active": true, 
+            "address": "Rua C", 
+            "email": "foo@bar.com"
+        }
+    },
+
+    {
+        "pk": 4, 
+        "model": "real_estate.property", 
+        "fields": {
+            "category": "A", 
+            "timestamp": "2013-12-23T18:24:16.004Z", 
+            "price": 200, 
+            "is_active": true, 
+            "address": "Avenida D", 
+            "email": "foo@bar.com"
+        }
+    },
+
+    {
+        "pk": 5, 
+        "model": "real_estate.property", 
+        "fields": {
+            "category": "A", 
+            "timestamp": "2013-12-23T18:24:16.282Z", 
+            "price": 300, 
+            "is_active": true, 
+            "address": "Avenida E", 
+            "email": "foo@bar.com"
+        }
+    },
+
+    {
+        "pk": 6, 
+        "model": "real_estate.property", 
+        "fields": {
+            "category": "A", 
+            "timestamp": "2013-12-23T18:24:16.282Z", 
+            "price": 400, 
+            "is_active": true, 
+            "address": "Avenida F", 
+            "email": "foo@bar.com"
+        }
+    },
+
+    {
+        "pk": 7, 
+        "model": "real_estate.property", 
+        "fields": {
+            "category": "A", 
+            "timestamp": "2013-12-23T18:24:16.282Z", 
+            "price": 500, 
+            "is_active": true, 
+            "address": "Avenida G", 
+            "email": "foo@bar.com"
+        }
+    },
+
+    {
+        "pk": 8, 
+        "model": "real_estate.property", 
+        "fields": {
+            "category": "F", 
+            "timestamp": "2013-12-23T18:24:16.282Z", 
+            "price": 500, 
+            "is_active": true, 
+            "address": "Avenida G", 
+            "email": "foo@bar.com"
+        }
+    },
+
+    {
+        "pk": 8, 
+        "model": "real_estate.property", 
+        "fields": {
+            "category": "F", 
+            "timestamp": "2013-12-23T18:24:16.282Z", 
+            "price": 5000, 
+            "is_active": true, 
+            "address": "Avenida G", 
+            "email": "foo@bar.com"
+        }
+    },
+
+    {
+        "pk": 9, 
+        "model": "real_estate.property", 
+        "fields": {
+            "category": "F", 
+            "timestamp": "2013-12-23T18:24:16.282Z", 
+            "price": 5000, 
+            "is_active": true, 
+            "address": "Avenida G", 
+            "email": "foo@bar.com"
+        }
+    }
+]

@@ -1,0 +1,18 @@
+#! /bin/bash
+
+mkdir temp
+cd temp
+
+sudo apt-get update
+sudo apt-get install python-dev
+
+wget https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py
+python ez_setup.py
+
+wget https://raw.github.com/pypa/pip/master/contrib/get-pip.py
+python get-pip.py
+
+pip install pytz
+pip install django
+pip install django-photologue
+
