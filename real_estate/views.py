@@ -12,7 +12,11 @@ from django.http import Http404
 def re_index(request):
     template = 'real_estate/base_filter.html'
 
-    dictionary = {}
+    properties = Property.objects.all()
+
+    dictionary = {
+#       'property_list': properties,
+    }
 
     context_instance = RequestContext(request)
 
