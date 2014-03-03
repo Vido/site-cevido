@@ -2,27 +2,7 @@
 
 {% block headers %}
 
-    <script src="{{ STATIC_URL }}js/filter_bottom_behavior.js"></script>
-    
-    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/h_nav_bar.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/introbox.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/wallpaper.css" media="screen" />
-
     <style type="text/css">
-
-    <script type="text/javascript">
-
-        $.ajax({
-            type: "GET",
-            url: "{% url 'real_estate.views.re_filter' %}",
-            success: function(data){
-                $("#content").html(data);
-            }
-        });
-
-    </script>
-
-    /* http://themeforest.net/item/full-state-responsive-and-bootstrap-real-state/4800556?WT.ac=solid_search_item&WT.seg_1=solid_search_item&WT.z_author=iwthemes */
 
     body, html{
         margin:0;
@@ -78,8 +58,7 @@
     </div>
     
     <div id="filter">
-        <!-- Filter form goes here -->
-        {% include "components/re_filter_form.html" %} 
+        <form >
     </div>
 
     <div id="content">

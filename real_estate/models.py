@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.urlresolvers import reverse
 
 from django.contrib.auth.models import User
 
@@ -23,6 +24,17 @@ class Property(models.Model):
     address = models.TextField(null=False)
     category = models.CharField(max_length=1, choices=CATEGORY)
     price = models.IntegerField()
+    # Numero Quartos
+    # Suites
+    # Metregem
+    # Cidade
+    # Bairro
+    # Banheiros
+    # Vagas garagem
+    # Valor do alugel
+    # Valor Condominio
+    # Condominio
+    # Imobiliaria
 
     def __repr__(self):
         catg_name = [c for c in self.CATEGORY if c[0] == self.category]
@@ -30,4 +42,8 @@ class Property(models.Model):
         catg_name = catg_name[0][1] if catg_name else "/"
         trunc_addr = self.address[:25]
         return "%s %s" % (catg_name, trunc_addr)
+   
+    @models.permalink 
+    def get_absolute_url(self):
+        return ('real_estate.views.re_details', [str(self.pk)])
 

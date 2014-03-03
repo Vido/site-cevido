@@ -9,13 +9,12 @@ from django.template import RequestContext
 from real_estate.models import Property
 from django.http import Http404
 
+
 def re_index(request):
     template = 'real_estate/base_filter.html'
 
-    properties = Property.objects.all()
-
     dictionary = {
-#       'property_list': properties,
+#        'property_list': properties,
     }
 
     context_instance = RequestContext(request)
@@ -23,18 +22,6 @@ def re_index(request):
     response = render_to_response(template, dictionary, context_instance)
     return response
 
-
-#def re_form(request):
-#    template = 'real_estate/base_filter.html'
-#
-#    dictionary = {}
-#
-#    context_instance = RequestContext(request)
-#
-#    response = render_to_response(template, dictionary, context_instance)
-#    return response
-#
-#
 
 def re_filter(request):
 
@@ -46,7 +33,7 @@ def re_filter(request):
     lte_arg = int(request.GET.get('price__lte', sys.maxint))
     gte_arg = int(request.GET.get('price__gte', 0))
     
-    properties = Property.objects.all()
+    properties = Property.objects.all().order_by('timestamp')
     properties = properties.filter(price__lte=lte_arg)
     properties = properties.filter(price__gte=gte_arg)
 
@@ -58,4 +45,23 @@ def re_filter(request):
 
     response = render_to_response(template, dictionary, context_instance)
     return response
+
+
+def re_details(request, property_pk):
+    template = 'real_estate/base_details.html'
+
+    try:
+        property = Property.objects.get(pk=property_pk)
+    except:
+        raise Http404
+
+    dictionary = {
+        'property': property,
+    }
+
+    context_instance = RequestContext(request)
+
+    response = render_to_response(template, dictionary, context_instance)
+    return response
+
 

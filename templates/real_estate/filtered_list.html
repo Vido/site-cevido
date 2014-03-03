@@ -1,35 +1,13 @@
-{% extends "base.html" %}
+<table border="1">
+    {% for property in property_list %} 
+        <tr>
+            <td>
+                {{ property.address }}
+                {{ property.category }}
+                {{ property.price }}<br>
+                <a href="{{ property.get_absolute_url }}">Detalhes</a>
+            </td>
+        </tr>
+    {% endfor %}
 
-{% block headers %}
-
-
-    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/h_nav_bar.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/introbox.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/wallpaper.css" media="screen" />
-
-    <style type="text/css">
-
-    /* http://themeforest.net/item/full-state-responsive-and-bootstrap-real-state/4800556?WT.ac=solid_search_item&WT.seg_1=solid_search_item&WT.z_author=iwthemes */
-
-    </style>
-
-{%  endblock %}
-
-{% block content %}
-
-<div id=holder>
-    <table border="1">
-        {% for property in property_list %} 
-            <tr>
-                <td>
-                    {{ property.address }}
-                    {{ property.category }}
-                    {{ property.price }}
-                </td>
-            </tr>
-        {% endfor %}
-    </table>
-</div>
-
-
-{% endblock %}
+</table>
