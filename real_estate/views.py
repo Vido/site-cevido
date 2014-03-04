@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 #Create your views here.
 
 import sys
@@ -5,12 +6,17 @@ import random
 
 from django.shortcuts import render_to_response
 from django.template import RequestContext
+from django.shortcuts import redirect
 
 from real_estate.models import Property
 from django.http import Http404
 
 
 def re_index(request):
+    
+    if request.method == "POST":
+        raise Http404
+    
     template = 'real_estate/base_filter.html'
 
     dictionary = {
@@ -55,8 +61,15 @@ def re_details(request, property_pk):
     except:
         raise Http404
 
+    template_descr = "Olá, tenho interesse no imovel {address}"
+    context_descr = {
+        'address': property.address,
+    }
+    description = template_descr.format(**context_descr)
+
     dictionary = {
         'property': property,
+        'description': description,
     }
 
     context_instance = RequestContext(request)
@@ -65,3 +78,22 @@ def re_details(request, property_pk):
     return response
 
 
+def re_contact(request):
+
+    if request.method == "POST":
+        raise Http404
+
+    try:
+        property_pk = int(request.GET.get('pk', None))
+        property = Property.objects.get(pk=property_pk)
+    except:
+        raise Http404
+
+    description = request.GET.get('description', None)
+    name = request.GET.get('name', None)
+    email = request.GET.get('email', None)
+    phone = request.GET.get('phone', None)
+    newsletter = request.GET.get('newsletter', True)
+    print 'FOOBAR'
+    return redirect(property.get_absolute_url())
+ 

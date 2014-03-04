@@ -24,6 +24,7 @@ class Property(models.Model):
     address = models.TextField(null=False)
     category = models.CharField(max_length=1, choices=CATEGORY)
     price = models.IntegerField()
+    # clicks = models.IntegerField()
     # Numero Quartos
     # Suites
     # Metregem
