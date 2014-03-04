@@ -2,45 +2,7 @@
 
 {% block headers %}
 
-    <style type="text/css">
-
-    body, html{
-        margin:0;
-        padding:0;
-        color:#000;
-        background:#a7a09a; 
-    }
-
-    #wrap{
-        width: 70%;
-        margin:0 auto;
-        background: #99c;
-    }
-
-    #header {
-        background: #ddd;
-    }
-
-    #nav {
-        background: #c99;
-    }
-    #content { 
-        width: 70%;
-        float: right;
-        background: #9c9;
-    }
-
-    #filter {
-        width: 30%;
-        float: left;
-        background: #c9c;
-    }
-    #footer {
-        clear: both;
-        background: #cc9;
-    }
-
-    </style>
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL}}css/two_columns.css" media="screen" />
 
 {%  endblock %}
 

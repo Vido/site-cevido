@@ -2,14 +2,12 @@
 
 {% block headers %}
 
-    <script src="{{ STATIC_URL }}js/filter_bottom_behavior.js"></script>
-    
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL}}css/two_columns.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/h_nav_bar.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/introbox.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/wallpaper.css" media="screen" />
 
-    <style type="text/css">
-
+    <script src="{{ STATIC_URL }}js/filter_bottom_behavior.js"></script>
     <script type="text/javascript">
 
         $.ajax({
@@ -20,47 +18,9 @@
             }
         });
 
+        /* http://themeforest.net/item/full-state-responsive-and-bootstrap-real-state/4800556?WT.ac=solid_search_item&WT.seg_1=solid_search_item&WT.z_author=iwthemes */
+
     </script>
-
-    /* http://themeforest.net/item/full-state-responsive-and-bootstrap-real-state/4800556?WT.ac=solid_search_item&WT.seg_1=solid_search_item&WT.z_author=iwthemes */
-
-    body, html{
-        margin:0;
-        padding:0;
-        color:#000;
-        background:#a7a09a; 
-    }
-
-    #wrap{
-        width: 70%;
-        margin:0 auto;
-        background: #99c;
-    }
-
-    #header {
-        background: #ddd;
-    }
-
-    #nav {
-        background: #c99;
-    }
-    #content { 
-        width: 70%;
-        float: right;
-        background: #9c9;
-    }
-
-    #filter {
-        width: 30%;
-        float: left;
-        background: #c9c;
-    }
-    #footer {
-        clear: both;
-        background: #cc9;
-    }
-
-    </style>
 
 {%  endblock %}
 
