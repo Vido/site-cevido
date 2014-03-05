@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block stylesheets %}
+    {{ block.super }}
+
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL}}css/two_columns.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL}}css/menu_navbar.css" media="screen" />
+
+{%  endblock %}
+
+{% block body %}
+
+<div id="wrap">
+    <div id="header">
+        <!-- Some logo goes here -->
+        <h1>C.E.Vido Imóveis</h1>
+        <h2>Nulla tenaci invia est via</h2>
+    </div>
+
+    <div id="menu">
+        {% include "components/hnavbar.html"%}
+    </div>
+    
+    <div id="filter"> 
+        {% block filter %}
+        <!-- Filter form goes here -->
+        Foobar 
+        {% endblock %}
+    </div>
+
+    <div id="content">
+        {% block content %}
+        <!-- Properties Info goes here -->
+        Foobar 
+        {% endblock %}
+    </div>
+
+    <div id="footer"> 
+        Foobar 
+    </div>
+</div>
+
+
+{% endblock %}
+

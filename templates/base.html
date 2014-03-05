@@ -2,13 +2,15 @@
 <html>
 
     <head>
+        {% block headers %}{% endblock %}
+        {% block stylesheets %}{% endblock %}
 
         <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
-        {% block headers %}{% endblock %}
+        {% block scripts %}{% endblock %}
     </head>
 
     <body>
-        {% block content %}{% endblock %}
+        {% block body %}{% endblock %}
     </body>
 
 </html>

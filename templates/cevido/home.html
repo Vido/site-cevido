@@ -1,42 +1,17 @@
 {% extends "base.html" %}
 
-{% block headers %}
+{% block stylesheets %}
 
     <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/h_nav_bar.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/introbox.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/wallpaper.css" media="screen" />
-    <style type="text/css">
 
+    <!--
     /* http://themeforest.net/item/full-state-responsive-and-bootstrap-real-state/4800556?WT.ac=solid_search_item&WT.seg_1=solid_search_item&WT.z_author=iwthemes */
-
-    #holder {
-        min-height: 100%;
-        position:relative;
-    }
-
-    #navigator{ 
-       margin-left: 3%;
-    }
-
-    #lowerholder{
-        width:100%;
-        height: 60%; 
-        position: absolute;
-        bottom: 0;
-        left: 0;
-    }
-
-    #introbox{
-       margin: 3%;
-       height: 65%; 
-       background-color:#202530;
-       overflow: auto;
-    }
-    </style>
-
+    -->
 {%  endblock %}
 
-{% block content %}
+{% block body %}
 
 <div id=holder>
 
@@ -47,17 +22,15 @@
     <div id="lowerholder"> 
 
         <div id="navigator">
-            {% include "components/hnavbar.html" %}
+{% include "components/hnavbar.html" %}
         </div>
 
         <div id="introbox">
-            {% block box %}
-            {% endblock %}
+            {% block box %}{% endblock %}
         </div>
 
     </div>
 
 </div>
-
 
 {% endblock %}

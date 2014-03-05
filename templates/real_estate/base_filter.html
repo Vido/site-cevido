@@ -1,11 +1,7 @@
-{% extends "base.html" %}
+{% extends "base_two_columns.html" %}
 
-{% block headers %}
-
-    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL}}css/two_columns.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/h_nav_bar.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/introbox.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/wallpaper.css" media="screen" />
+{% block scripts %}
+    {{ block.super }}
 
     <script src="{{ STATIC_URL }}js/filter_bottom_behavior.js"></script>
     <script type="text/javascript">
@@ -18,39 +14,16 @@
             }
         });
 
-        /* http://themeforest.net/item/full-state-responsive-and-bootstrap-real-state/4800556?WT.ac=solid_search_item&WT.seg_1=solid_search_item&WT.z_author=iwthemes */
-
     </script>
 
 {%  endblock %}
 
-{% block content %}
-
-<div id="wrap">
-    <div id="header">
-        <!-- TEMP -->
-        <h1>Hallo!</h1>
-    </div>
-
-    <div id="menu">
-        <!-- TEMP -->
-        Foobar 
-    </div>
-    
-    <div id="filter">
+{% block filter %}
         <!-- Filter form goes here -->
         {% include "components/re_filter_form.html" %} 
-    </div>
-
-    <div id="content">
-        <!-- Properties Info goes here -->
-        Foobar 
-    </div>
-
-    <div id="footer"> 
-        Foobar 
-    </div>
-</div>
-
-
 {% endblock %}
+
+{% block content %}
+        <!-- Content made via ajax request to another view -->
+{% endblock %}
+

@@ -1,53 +1,36 @@
-{% extends "base.html" %}
+{% extends "base_two_columns.html" %}
 
-{% block headers %}
+{% block filter %}
+    </br>
+    Mostre interesse por este imovel!
+    <form id="contactform" action="{% url "real_estate.views.re_contact" %}" method="GET">
 
-    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL}}css/two_columns.css" media="screen" />
+    <textarea name="description" rows="4" cols="34">{{ description }}</textarea></br>
+    <input name="pk" type="hidden" value="{{ property.pk }}"></br>
+    Nome: <input name="name" size="30"></br>
+    Email: <input name="email" size="30"></br>
+    Fone: <input name="phone" size="30"></br>
+    Receber mais informações? <input value="newsletter" type="checkbox" checked="checked"></br>
+    <input value="Contato" type="submit"/></br>
 
-{%  endblock %}
+    </form>
+{% endblock %}
 
 {% block content %}
-
-<div id="wrap">
-    <div id="header">
-        <!-- TEMP -->
-        <h1>Hallo!</h1>
-    </div>
-
-    <div id="menu">
-        <!-- TEMP -->
-        Foobar 
-    </div>
-    
-    <div id="filter">
-        </br>
-        Mostre interesse por este imovel!
-        <form id="contactform" action="{% url "real_estate.views.re_contact" %}" method="GET">
-            <textarea name="description" rows="4" cols="34"
-                >{{ description }}</textarea></br>
-            <input name="pk" type="hidden" value="{{ property.pk }}"></br>
-            Nome: <input name="name" size="30"></br>
-            Email: <input name="email" size="30"></br>
-            Fone: <input name="phone" size="30"></br>
-            Receber mais informações? <input value="newsletter"
-                type="checkbox" checked="checked"></br>
-            <input value="Contato" type="submit"/></br>
-
-        </form>
-    </div>
-
-    <div id="content">
-        <img src="{{ STATIC_URL }}/images/generic_house.jpg"
-            height="300" width="400"/></br>
-        Preço: {{ property.price }}</br>
-        Tipo: {{ property.category }}</br>
-        Endereço: {{ property.address }}</br>
-    </div>
-
-    <div id="footer"> 
-        Foobar 
-    </div>
-</div>
+    <img src="{{ STATIC_URL }}/images/generic_house.jpg" height="300" width="400"/></br>
+    <hr>
+    Preço: R$ {{ property.price }}</br>
+    Aluguel: R${{ property.rent }}</br>
+    Condomínio: R${{ property.condo }}</br>
+    <hr>
+    Tipo: {{ property.category }}</br>
+    Cidade: {{ property.city }}</br>
+    Bairro: {{ property.neighborhood }}</br>
+    <hr>
+    Area: {{ property.area }} m²</br>
+    # Quartos: {{ property.rooms }}</br>
+    # Banheiros: {{ property.wc }}</br>
+    # Vagas na Garagem: {{ property.garage }}</br>
 
 {% endblock %}
 

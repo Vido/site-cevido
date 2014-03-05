@@ -1,7 +1,8 @@
 from django.db import models
 from django.core.urlresolvers import reverse
-
 from django.contrib.auth.models import User
+
+from photologue.models import Gallery 
 
 # Create your models here.
 class Property(models.Model):
@@ -18,9 +19,11 @@ class Property(models.Model):
 
     # Reference number
     #owner = models.ForeignKey(User)
+
     timestamp = models.DateTimeField(auto_now_add=True)
     is_active = models.BooleanField(default=True)
     clicks = models.IntegerField(default=0)
+    photo_gallery = models.OneToOneField(Gallery, primary_key=False)
 
     email = models.EmailField(unique=False, null=False)
     address = models.TextField(null=False)
