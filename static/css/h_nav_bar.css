@@ -1,6 +1,6 @@
 #hnavbar {
     font-family: Arial, Helvetica, sans-serif;
-    font-size:150%
+    font-size:100%
 }
 
 #hnavbar ul{
@@ -14,7 +14,7 @@
     float:left;
 }
 
-#hnavbar a:link,a:visited{
+#hnavbar a:link, #hnavbar a:visited{
     display:block;
     width:200px;
     font-weight:bold;
@@ -26,6 +26,6 @@
     text-transform:uppercase;
     }
 
-#hnavbar a:hover,a:active{
+#hnavbar a:hover, #hnavbar a:active{
     background-color:#7A991A;
 }

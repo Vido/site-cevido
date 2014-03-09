@@ -1,22 +1,42 @@
-body, html{
+body, html {
     margin:0;
     padding:0;
-    color:#000;
+    color:#000000;
     background:#a7a09a; 
 }
 
-#wrap{
+#wrap {
     width: 70%;
     margin:0 auto;
     background: #99c;
 }
 
 #header {
-    background: #ddd;
+    color: #FFFFFF;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    background: #202530;
 }
 
-#nav {
-    background: #c99;
+#header_struct1, #header_struct2 {
+    float:left; 
+}
+
+#header img {
+    margin-top: 10%;
+    margin-left: 10%;
+}
+
+#header h1 {
+    margin-left: 5%;
+}
+
+#header h2 {
+    font-size: 150%;
+    margin-left: 5%;
+}
+
+#menu {
+    background: #7A991A;
 }
 
 #content { 
@@ -32,7 +52,36 @@ body, html{
 }
 
 #footer {
+    font-size: 80%;
+    background: #202530;
+    text-align: left; 
+    color: #FFFFFF;
     clear: both;
-    background: #cc9;
+}
+
+#footer b {
+    font-family: sans-serif;
+}
+
+#footer a {
+    text-decoration:none;
+    color: #FFFFFF;
+}
+
+#footer a:hover {
+    color: #AAAAFF;
+}
+
+#footer_struct4 {
+    position: absolute;
+    float:right; 
+    width: 10%;
+}
+
+#footer_struct1, #footer_struct2, #footer_struct3 { 
+    position: relative;
+    background: #202530;
+    float:right; 
+    width: 32%; 
 }
 

@@ -12,9 +12,13 @@
 
 <div id="wrap">
     <div id="header">
-        <!-- Some logo goes here -->
-        <h1>C.E.Vido Imóveis</h1>
-        <h2>Nulla tenaci invia est via</h2>
+        <div id="header_struct1">
+            <img src="{{ STATIC_URL }}images/header_logo.png">
+        </div>
+        <div id="header_struct2">
+            <h1>C.E.Vido Imóveis</h1>
+            <h2>Nulla tenaci invia est via</h2>
+        </div><div style="clear:both"></div>
     </div>
 
     <div id="menu">
@@ -36,10 +40,9 @@
     </div>
 
     <div id="footer"> 
-        Foobar 
+        {% include "text/footer.html" %}
     </div>
 </div>
-
 
 {% endblock %}
 
