@@ -9,7 +9,9 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 """
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+
 import os
+
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
@@ -89,6 +91,7 @@ STATICFILES_DIRS = (
 )
 
 MEDIA_ROOT = BASE_DIR + '/media/'
+MEDIA_URL = '/media/'
 
 TEMPLATE_DIRS = (
     BASE_DIR + '/templates/'

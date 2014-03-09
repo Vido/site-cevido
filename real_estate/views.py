@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-#Create your views here.
 
 import sys
 import random
@@ -43,6 +42,11 @@ def re_filter(request):
     properties = properties.filter(price__lte=lte_arg)
     properties = properties.filter(price__gte=gte_arg)
 
+    # Workaround to show thumbnail
+    for p in properties:
+        p.thumbnail = p.photo_gallery.photos.all()[0].get_thumbnail_url
+        print p.thumbnail
+
     dictionary = {
        'property_list': properties,
     }
@@ -75,6 +79,7 @@ def re_details(request, property_pk):
     context_instance = RequestContext(request)
 
     response = render_to_response(template, dictionary, context_instance)
+
     return response
 
 
@@ -94,6 +99,7 @@ def re_contact(request):
     email = request.GET.get('email', None)
     phone = request.GET.get('phone', None)
     newsletter = request.GET.get('newsletter', True)
-    print 'FOOBAR'
+
+    # TODO: Send an email or something
     return redirect(property.get_absolute_url())
  

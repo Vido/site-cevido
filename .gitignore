@@ -27,7 +27,7 @@ pip-log.txt
 pip-delete-this-directory.txt
 
 # Unit test / coverage reports
-*.swp
+*.sw[op]
 .tox/
 .coverage
 .cache

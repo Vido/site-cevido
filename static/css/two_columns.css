@@ -42,8 +42,25 @@ body, html {
 #content { 
     width: 70%;
     float: right;
-    background: #9c9;
+    background: #DDDDFF;
 }
+
+#content table {
+    width: 100%;
+    border: 1;
+    /*border: 0px;*/
+}
+
+#content img {
+    padding: 1px;
+    border: 1px solid #AAAAAA;
+}
+
+#content img:hover {
+    padding: 1px;
+    border: 1px solid #666666;
+}
+
 
 #filter {
     width: 30%;

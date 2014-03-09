@@ -1,6 +1,14 @@
 {% extends "base_two_columns.html" %}
 
+{% block stylesheets %}
+    {{ block.super }}
+
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/details.css" media="screen" />
+
+{% endblock %}
+
 {% block filter %}
+
     </br>
     Mostre interesse por este imovel!
     <form id="contactform" action="{% url "real_estate.views.re_contact" %}" method="GET">
@@ -14,23 +22,27 @@
     <input value="Contato" type="submit"/></br>
 
     </form>
+
 {% endblock %}
 
 {% block content %}
-    <img src="{{ STATIC_URL }}/images/generic_house.jpg" height="300" width="400"/></br>
-    <hr>
-    Preço: R$ {{ property.price }}</br>
-    Aluguel: R${{ property.rent }}</br>
-    Condomínio: R${{ property.condo }}</br>
-    <hr>
-    Tipo: {{ property.category }}</br>
-    Cidade: {{ property.city }}</br>
-    Bairro: {{ property.neighborhood }}</br>
-    <hr>
-    Area: {{ property.area }} m²</br>
-    # Quartos: {{ property.rooms }}</br>
-    # Banheiros: {{ property.wc }}</br>
-    # Vagas na Garagem: {{ property.garage }}</br>
 
+    <div id="details_struct1">
+        <img src="{{ STATIC_URL }}/images/generic_house.jpg" height="60%" width="400"/>
+    </div>
+
+    <div id="details_struct2">
+        Preço: R$ {{ property.price }}</br>
+        Aluguel: R${{ property.rent }}</br>
+        Condomínio: R${{ property.condo }}</br>
+        Tipo: {{ property.category }}</br>
+        Cidade: {{ property.city }}</br>
+        Bairro: {{ property.neighborhood }}</br>
+        Area: {{ property.area }} m²</br>
+        # Quartos: {{ property.rooms }}</br>
+        # Banheiros: {{ property.wc }}</br>
+        # Vagas na Garagem: {{ property.garage }}</br>
+    </div>
+    <div style="clear:both"></div>
 {% endblock %}
 

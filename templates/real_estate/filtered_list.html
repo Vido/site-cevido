@@ -1,13 +1,25 @@
-<table border="1">
+<table>
     {% for property in property_list %} 
         <tr>
+            <th rowspan="3" class="">
+                <a href="{{ property.get_absolute_url }}">
+                    <img src="{{ MEDIA_ROOT }}{{ property.thumbnail }}">
+                </a>
+            </th>
+            <th>{{ property.address }}</th>
+        </tr>
+
+        <tr>
             <td>
-                {{ property.address }}
+                R$ {{ property.price }}
+            </td>
+        </tr>
+
+        <tr>
+            <td>
                 {{ property.category }}
-                {{ property.price }}<br>
                 <a href="{{ property.get_absolute_url }}">Detalhes</a>
             </td>
         </tr>
     {% endfor %}
-
 </table>
