@@ -6,9 +6,11 @@ import random
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.shortcuts import redirect
+from django.http import Http404
+
+from photologue.models import Photo
 
 from real_estate.models import Property
-from django.http import Http404
 
 
 def re_index(request):
@@ -16,13 +18,13 @@ def re_index(request):
     if request.method == "POST":
         raise Http404
     
-    template = 'real_estate/base_filter.html'
 
     dictionary = {
 #        'property_list': properties,
     }
 
     context_instance = RequestContext(request)
+    template = 'real_estate/base_filter.html'
 
     response = render_to_response(template, dictionary, context_instance)
     return response
@@ -33,7 +35,6 @@ def re_filter(request):
     if request.method == "POST":
         raise Http404
 
-    template = 'real_estate/filtered_list.html'
 
     lte_arg = int(request.GET.get('price__lte', sys.maxint))
     gte_arg = int(request.GET.get('price__gte', 0))
@@ -45,45 +46,48 @@ def re_filter(request):
     # Workaround to show thumbnail
     for p in properties:
         p.thumbnail = p.photo_gallery.photos.all()[0].get_thumbnail_url
-        print p.thumbnail
 
     dictionary = {
        'property_list': properties,
     }
 
     context_instance = RequestContext(request)
+    template = 'real_estate/filtered_list.html'
 
     response = render_to_response(template, dictionary, context_instance)
     return response
 
 
 def re_details(request, property_pk):
-    template = 'real_estate/base_details.html'
 
     try:
         property = Property.objects.get(pk=property_pk)
     except:
         raise Http404
 
-    template_descr = "Olá, tenho interesse no imovel {address}"
+    
     context_descr = {
         'address': property.address,
     }
+    template_descr = "Olá, tenho interesse no imovel {address}"
     description = template_descr.format(**context_descr)
+   
+    thumbnail_list = property.photo_gallery.photos.all()
 
     dictionary = {
         'property': property,
         'description': description,
+        'thumbnails_list': thumbnail_list,
     }
 
     context_instance = RequestContext(request)
+    template = 'real_estate/base_details.html'
 
     response = render_to_response(template, dictionary, context_instance)
-
     return response
 
 
-def re_contact(request):
+def re_contact(request, property_pk):
 
     if request.method == "POST":
         raise Http404
@@ -102,4 +106,21 @@ def re_contact(request):
 
     # TODO: Send an email or something
     return redirect(property.get_absolute_url())
+
+
+def re_photos(request, photo_pk):
  
+    if request.method == "POST":
+        raise Http404
+
+    photo = Photo.objects.get(pk=photo_pk)
+    
+    dictionary = {
+        'photo': photo,
+    }
+    context_instance = RequestContext(request)
+    template = 'real_estate/photo.html'
+
+    response = render_to_response(template, dictionary, context_instance)
+    return response
+

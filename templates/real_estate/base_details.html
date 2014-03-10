@@ -7,6 +7,10 @@
 
 {% endblock %}
 
+{% block scripts %}
+    <script src="{{ STATIC_URL }}js/re_photo_galery.js"></script>
+{% endblock %}
+
 {% block filter %}
 
     </br>
@@ -26,10 +30,11 @@
 {% endblock %}
 
 {% block content %}
-
     <div id="details_struct1">
+        <!--
         <img src="{{ STATIC_URL }}/images/generic_house.jpg" height="60%" width="400"/>
-    </div>
+        --> 
+   </div>
 
     <div id="details_struct2">
         Preço: R$ {{ property.price }}</br>
@@ -44,5 +49,15 @@
         # Vagas na Garagem: {{ property.garage }}</br>
     </div>
     <div style="clear:both"></div>
+
+    <div>
+        {% for thumbnail in thumbnails_list %}
+        <!-- TODO: Make the ajax link here. -->
+        <a class="call_photo_ajax" href="{% url 'real_estate.views.re_photos' thumbnail.pk %}">
+            <img src="{{ MEDIA_ROOT }}{{ thumbnail.get_thumbnail_url }}">
+        </a>
+        {% endfor %}
+    </div>
+
 {% endblock %}
 
