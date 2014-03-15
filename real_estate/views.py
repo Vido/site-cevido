@@ -1,11 +1,13 @@
 # -*- coding: utf-8 -*-
 
 import sys
+import json
 import random
 
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.shortcuts import redirect
+from django.http import HttpResponse
 from django.http import Http404
 
 from photologue.models import Photo
@@ -17,16 +19,11 @@ def re_index(request):
     
     if request.method == "POST":
         raise Http404
-    
-
-    dictionary = {
-#        'property_list': properties,
-    }
 
     context_instance = RequestContext(request)
     template = 'real_estate/base_filter.html'
 
-    response = render_to_response(template, dictionary, context_instance)
+    response = render_to_response(template, {}, context_instance)
     return response
 
 
@@ -110,17 +107,18 @@ def re_contact(request, property_pk):
 
 def re_photos(request, photo_pk):
  
-    if request.method == "POST":
+    if request.method == 'POST':
         raise Http404
 
     photo = Photo.objects.get(pk=photo_pk)
     
     dictionary = {
-        'photo': photo,
+        'get_display_url': photo.get_display_url(),
     }
-    context_instance = RequestContext(request)
-    template = 'real_estate/photo.html'
 
-    response = render_to_response(template, dictionary, context_instance)
+    response = HttpResponse(
+        json.dumps(dictionary),
+        content_type="application/json"
+    )
+
     return response
-
