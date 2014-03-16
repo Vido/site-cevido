@@ -21,4 +21,4 @@ def subscribe(request):
 
 def unsubscribe(request):
     return redirect(reverse('cevido.views.contact', kwargs={}))
- 
+

@@ -1,10 +1,10 @@
 <form id="filterform" action="{% url 'real_estate.views.re_filter' %}" method="GET">
     <input id="price__gte" name="price__gte" value="" type="hidden"/>
     <input id="price__lte" name="price__lte" value="" type="hidden"/>
-    
+
     <input id="rooms__gte" name="rooms__gte" value="" type="hidden"/>
     <input id="rooms__lte" name="rooms__lte" value="" type="hidden"/>
-    
+
     <p>
         <label for="price">Preço:</label>
         <input type="text" id="price" size="40">

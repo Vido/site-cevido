@@ -7,7 +7,7 @@
 function print_price(pi, pf){
     $("#price").val(
         "R$" + pi + "mil até R$" + pf + "mil"
-    );    
+    );
 };
 
 
@@ -33,7 +33,7 @@ $(function() {
 function print_rooms(nri, nrf){
     $("#rooms").val(
         "De " + nri + " a " + nrf + "quartos"
-    );    
+    );
 };
 
 $(function() {

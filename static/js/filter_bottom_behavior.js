@@ -7,7 +7,7 @@
 $(document).ready( function(){
     $("#filterform").submit( function(e){
         e.preventDefault();
- 
+
         $.ajax({
             type: "GET",
             url: $(this).attr('action'),

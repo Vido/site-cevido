@@ -2,7 +2,7 @@ body, html {
     margin:0;
     padding:0;
     color:#000000;
-    background:#a7a09a; 
+    background:#a7a09a;
 }
 
 #wrap {
@@ -18,7 +18,7 @@ body, html {
 }
 
 #header_struct1, #header_struct2 {
-    float:left; 
+    float:left;
 }
 
 #header img {
@@ -39,7 +39,7 @@ body, html {
     background: #7A991A;
 }
 
-#content { 
+#content {
     width: 70%;
     float: right;
     background: #DDDDFF;
@@ -71,7 +71,7 @@ body, html {
 #footer {
     font-size: 80%;
     background: #202530;
-    text-align: left; 
+    text-align: left;
     color: #FFFFFF;
     clear: both;
 }
@@ -91,14 +91,14 @@ body, html {
 
 #footer_struct4 {
     position: absolute;
-    float:right; 
+    float:right;
     width: 10%;
 }
 
-#footer_struct1, #footer_struct2, #footer_struct3 { 
+#footer_struct1, #footer_struct2, #footer_struct3 {
     position: relative;
     background: #202530;
-    float:right; 
-    width: 32%; 
+    float:right;
+    width: 32%;
 }
 

@@ -35,12 +35,12 @@ def re_filter(request):
 
     _price_lte = int(request.GET.get('price__lte', sys.maxint))
     _price_gte = int(request.GET.get('price__gte', 0))
- 
+
     _rooms_lte = int(request.GET.get('rooms__lte', sys.maxint))
     _rooms_gte = int(request.GET.get('rooms__gte', 0))
-    
+
     #TODO: Find a smarter way
-    
+
     properties = Property.objects.all().order_by('timestamp')
 
     properties = properties.filter(price__lte=_price_lte)
@@ -72,13 +72,13 @@ def re_details(request, property_pk):
     except:
         raise Http404
 
-    
+
     context_descr = {
         'address': property.address,
     }
     template_descr = "Olá, tenho interesse no imovel {address}"
     description = template_descr.format(**context_descr)
-   
+
     thumbnail_list = property.photo_gallery.photos.all()
 
     dictionary = {
@@ -116,7 +116,7 @@ def re_contact(request, property_pk):
 
 
 def re_photos(request, photo_pk):
- 
+
     if request.method == 'POST':
         raise Http404
 

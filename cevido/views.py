@@ -23,7 +23,7 @@ def home(request):
     response = render_to_response(template, dictionary, context_instance)
     return response
 
- 
+
 def contact(request):
     template = 'cevido/contact.html'
 
@@ -40,4 +40,4 @@ def contact(request):
 
     response = render_to_response(template, dictionary, context_instance)
     return response
- 
+

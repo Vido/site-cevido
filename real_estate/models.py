@@ -2,11 +2,11 @@ from django.db import models
 from django.core.urlresolvers import reverse
 from django.contrib.auth.models import User
 
-from photologue.models import Gallery 
+from photologue.models import Gallery
 
 # Create your models here.
 class Property(models.Model):
-    
+
     CATEGORY = (
         ('T', 'Terreno'),
         ('H', 'Casa'),
@@ -32,11 +32,11 @@ class Property(models.Model):
     price = models.IntegerField()
     condo = models.IntegerField(default=0)
     rent = models.IntegerField(default=0)
-    
+
     rooms = models.IntegerField(default=0)
-    wc = models.IntegerField(default=0)   
-    garage = models.IntegerField(default=0)   
- 
+    wc = models.IntegerField(default=0)
+    garage = models.IntegerField(default=0)
+
     area = models.IntegerField(default=0)
     city = models.TextField(null=True)
     neighborhood = models.TextField(null=True)
@@ -44,13 +44,13 @@ class Property(models.Model):
 
     def __repr__(self):
         catg_name = [c for c in self.CATEGORY if c[0] == self.category]
-        
+
         catg_name = catg_name[0][1] if catg_name else "/"
         trunc_addr = self.address[:25]
         return "%s %s" % (catg_name, trunc_addr)
 
- 
-    @models.permalink 
+
+    @models.permalink
     def get_absolute_url(self):
         return ('real_estate.views.re_details', [str(self.pk)])
 
