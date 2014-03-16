@@ -16,7 +16,7 @@ from real_estate.models import Property
 
 
 def re_index(request):
-    
+
     if request.method == "POST":
         raise Http404
 
@@ -33,12 +33,22 @@ def re_filter(request):
         raise Http404
 
 
-    lte_arg = int(request.GET.get('price__lte', sys.maxint))
-    gte_arg = int(request.GET.get('price__gte', 0))
+    _price_lte = int(request.GET.get('price__lte', sys.maxint))
+    _price_gte = int(request.GET.get('price__gte', 0))
+ 
+    _rooms_lte = int(request.GET.get('rooms__lte', sys.maxint))
+    _rooms_gte = int(request.GET.get('rooms__gte', 0))
+    
+    #TODO: Find a smarter way
     
     properties = Property.objects.all().order_by('timestamp')
-    properties = properties.filter(price__lte=lte_arg)
-    properties = properties.filter(price__gte=gte_arg)
+
+    properties = properties.filter(price__lte=_price_lte)
+    properties = properties.filter(price__gte=_price_gte)
+
+    properties = properties.filter(rooms__lte=_rooms_lte)
+    properties = properties.filter(rooms__gte=_rooms_gte)
+
 
     # Workaround to show thumbnail
     for p in properties:
@@ -49,7 +59,7 @@ def re_filter(request):
     }
 
     context_instance = RequestContext(request)
-    template = 'real_estate/filtered_list.html'
+    template = 'components/filtered_list.html'
 
     response = render_to_response(template, dictionary, context_instance)
     return response
@@ -111,7 +121,6 @@ def re_photos(request, photo_pk):
         raise Http404
 
     photo = Photo.objects.get(pk=photo_pk)
-    
     dictionary = {
         'get_display_url': photo.get_display_url(),
     }

@@ -8,7 +8,10 @@
 {% endblock %}
 
 {% block scripts %}
+    {{ block.super }}
+
     <script src="{{ STATIC_URL }}js/re_photo_galery.js"></script>
+
 {% endblock %}
 
 {% block filter %}

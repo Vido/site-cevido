@@ -1,7 +1,21 @@
 <form id="filterform" action="{% url 'real_estate.views.re_filter' %}" method="GET">
-    Preço minimo:
-    <input  name="price__gte" value="" size="10"/></br>
-    Preço máximo:
-    <input  name="price__lte" value="" size="10"/></br>
+    <input id="price__gte" name="price__gte" value="" type="hidden"/>
+    <input id="price__lte" name="price__lte" value="" type="hidden"/>
+    
+    <input id="rooms__gte" name="rooms__gte" value="" type="hidden"/>
+    <input id="rooms__lte" name="rooms__lte" value="" type="hidden"/>
+    
+    <p>
+        <label for="price">Preço:</label>
+        <input type="text" id="price" size="40">
+    </p>
+    <div id="slider-price"></div>
+
+    <p>
+        <label for="rooms">Quartos:</label>
+        <input type="text" id="rooms" size="40">
+    </p>
+    <div id="slider-rooms"></div>
+
     <input value="Buscar" type="submit"/></br>
 </form>

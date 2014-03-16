@@ -1,18 +1,36 @@
 {% extends "base_two_columns.html" %}
 
+{% block stylesheets %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{{ STATIC_URL }}jquery-ui-1.10.4.custom/css/trontastic/jquery-ui-1.10.4.custom.min.css">
+{% endblock%}
+
 {% block scripts %}
     {{ block.super }}
-
+    <script src="{{ STATIC_URL }}/jquery-ui-1.10.4.custom/js/jquery-ui-1.10.4.custom.min.js"></script>
     <script src="{{ STATIC_URL }}js/filter_bottom_behavior.js"></script>
+    <script src="{{ STATIC_URL }}js/re_filter_sliders.js"></script>
     <script type="text/javascript">
 
-        $.ajax({
-            type: "GET",
-            url: "{% url 'real_estate.views.re_filter' %}",
-            success: function(data){
-                $("#content").html(data);
-            }
-        });
+    $(function(){
+        print_price(
+            $("#slider-price").slider("values", 0),
+            $("#slider-price").slider("values", 1)
+        );
+
+        print_rooms(
+            $("#slider-rooms").slider("values", 0),
+            $("#slider-rooms").slider("values", 1)
+        );
+    });
+
+    $.ajax({
+        type: "GET",
+        url: "{% url 'real_estate.views.re_filter' %}",
+        success: function(data){
+            $("#content").html(data);
+        }
+    });
 
     </script>
 
