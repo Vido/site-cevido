@@ -1,26 +1,34 @@
-<table>
-    {% for property in property_list %}
+{% for property in property_list %}
+<div class="listitem {% cycle 'darkstrip' 'lightstrip'%}">
+    <table>
         <tr>
             <th rowspan="3" class="">
                 <a href="{{ property.get_absolute_url }}">
                     <img src="{{ MEDIA_ROOT }}{{ property.thumbnail }}">
                 </a>
             </th>
-            <th>{{ property.address }}</th>
+            <th>{{ property.verbose_category }}
+                {{ property.address }}
+                 <b>Preço: R$ {{ property.price }}</b>
+            </th>
         </tr>
 
         <tr>
             <td>
-                R$ {{ property.price }} Quartos: {{ property.rooms }}
-
+                Area: {{ property.area }}{{ property.unit }} |
+                Quartos: {{ property.rooms }} |
+                WC: {{ property.rooms }} |
+                Garagem: {{ property.rooms }}
             </td>
         </tr>
 
         <tr>
             <td>
-                {{ property.category }}
+                 Aluguel: R$ {{ property.rent }} |
+                 Condomínio: R$ {{ property.condo }} |
                 <a href="{{ property.get_absolute_url }}">Detalhes</a>
             </td>
         </tr>
-    {% endfor %}
-</table>
+    </table>
+</div>
+{% endfor %}

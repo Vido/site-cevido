@@ -76,7 +76,7 @@ def re_details(request, property_pk):
     context_descr = {
         'address': property.address,
     }
-    template_descr = "Olá, tenho interesse no imovel {address}"
+    template_descr = u"Olá, tenho interesse no imovel {address}"
     description = template_descr.format(**context_descr)
 
     thumbnail_list = property.photo_gallery.photos.all()

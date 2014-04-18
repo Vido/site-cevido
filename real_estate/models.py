@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from django.db import models
 from django.core.urlresolvers import reverse
 from django.contrib.auth.models import User
@@ -38,9 +40,12 @@ class Property(models.Model):
     garage = models.IntegerField(default=0)
 
     area = models.IntegerField(default=0)
+    unit = models.CharField(max_length=10, default='m²')
     city = models.TextField(null=True)
     neighborhood = models.TextField(null=True)
 
+    def verbose_category(self):
+        return dict(Property.CATEGORY)[self.category]
 
     def __repr__(self):
         catg_name = [c for c in self.CATEGORY if c[0] == self.category]

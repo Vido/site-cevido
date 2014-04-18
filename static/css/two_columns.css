@@ -2,13 +2,14 @@ body, html {
     margin:0;
     padding:0;
     color:#000000;
-    background:#a7a09a;
+    /*background:#F0F8FF;*/
+    background: #E6E6FA;
 }
 
 #wrap {
     width: 70%;
     margin:0 auto;
-    background: #99c;
+    background: #202530;
 }
 
 #header {
@@ -42,7 +43,8 @@ body, html {
 #content {
     width: 70%;
     float: right;
-    background: #DDDDFF;
+    background:#F0F8FF;
+    /*background: #E6E6FA;*/
 }
 
 #content table {
@@ -65,7 +67,7 @@ body, html {
 #filter {
     width: 30%;
     float: left;
-    background: #c9c;
+    background: #8FBC8F;
 }
 
 #footer {
