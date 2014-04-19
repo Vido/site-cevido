@@ -27,7 +27,7 @@
 
     $.ajax({
         type: "GET",
-        url: "{% url 'real_estate.views.re_filter' %}",
+        url: "{% url 'filter.views.f_no_filter' %}",
         success: function(data){
             $("#content").html(data);
         }
@@ -39,7 +39,7 @@
 
 {% block filter %}
         <!-- Filter form goes here -->
-        {% include "components/re_filter_form.html" %}
+        {% include "filter/f_ap_form.html" %}
 {% endblock %}
 
 {% block content %}

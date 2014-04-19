@@ -15,6 +15,7 @@ urlpatterns = patterns('',
     url(r'^photologue/', include('photologue.urls')),
     url(r'^newsletter/', include('newsletter.urls')),
     url(r'^real_estate/', include('real_estate.urls')),
+    url(r'^filter/', include('filter.urls')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^media/(?P<path>.*)$', 'django.views.static.serve',
         {'document_root': settings.MEDIA_ROOT})

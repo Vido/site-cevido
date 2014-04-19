@@ -42,6 +42,7 @@ INSTALLED_APPS = (
     'south',
     'newsletter',
     'real_estate',
+    'filter',
 )
 
 MIDDLEWARE_CLASSES = (
