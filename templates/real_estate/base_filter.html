@@ -33,13 +33,22 @@
         }
     });
 
+    $("#id_which_kind").function(){
+        //alert("FOO");
+    };
+
     </script>
 
 {%  endblock %}
 
 {% block filter %}
         <!-- Filter form goes here -->
-        {% include "filter/f_ap_form.html" %}
+        {% comment %}
+            {% include "filter/f_ap_form.html" %}
+        {% endcomment %}
+        <form action="{% url 'real_estate.views.re_index' %}" method="GET">
+            {{ form.as_p }}
+        </form>
 {% endblock %}
 
 {% block content %}

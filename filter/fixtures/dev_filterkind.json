@@ -1,0 +1,38 @@
+[
+{
+    "pk": 1, 
+    "model": "filter.filterkind", 
+    "fields": {
+        "list_template": "f_h_list.html", 
+        "form_template": "f_h_form.html", 
+        "title": "Casas"
+    }
+},
+{
+    "pk": 2, 
+    "model": "filter.filterkind", 
+    "fields": {
+        "list_template": "f_h_list.html", 
+        "form_template": "f_h_form.html", 
+        "title": "Apartamentos"
+    }
+},
+{
+    "pk": 3, 
+    "model": "filter.filterkind", 
+    "fields": {
+        "list_template": "f_h_list.html", 
+        "form_template": "f_h_form.html", 
+        "title": "Casa ou Apartamentos"
+    }
+},
+{
+    "pk": 4, 
+    "model": "filter.filterkind", 
+    "fields": {
+        "list_template": "f_h_list.html", 
+        "form_template": "f_h_form.html", 
+        "title": "Terrenos"
+    }
+}
+]

@@ -3,11 +3,11 @@ from django import forms
 from filter.models import FilterKind
 
 KINDS = ({
-            (fk.pk, fk.name)
+            (fk.pk, fk.title)
             for fk
             in FilterKind.objects.all()
         })
 
-class KindForm(forms.Form);
+class KindForm(forms.Form):
     which_kind = forms.ChoiceField(widget=forms.Select, choices=KINDS)
 

@@ -13,6 +13,7 @@ from photologue.models import Photo
 
 from real_estate.models import Property
 from filter.models import FilterKind
+from filter.forms import KindForm
 
 
 def re_index(request):
@@ -20,10 +21,14 @@ def re_index(request):
     if request.method == "POST":
         raise Http404
 
+    dictionary = {
+        'form': KindForm(),
+    }
+
     context_instance = RequestContext(request)
     template = 'real_estate/base_filter.html'
 
-    response = render_to_response(template, {}, context_instance)
+    response = render_to_response(template, dictionary, context_instance)
     return response
 
 
