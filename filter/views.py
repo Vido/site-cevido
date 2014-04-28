@@ -1,3 +1,4 @@
+import os
 import sys
 import random
 
@@ -6,10 +7,26 @@ from django.template import RequestContext
 from django.http import Http404
 
 from real_estate.models import Property
+from filter.models import FilterKind
 
 
-def f_get_form(request):
-    pass
+def f_select_form(request):
+    if not request.method == "GET":
+        raise Http404
+
+    filter_pk = request.GET.get("kind", 0)
+    f_kind = FilterKind.objects.get(pk=filter_pk)
+
+    template = os.path.join('filter', f_kind.form_template)
+
+    dictionary = {
+        'list_template': f_kind.list_template,
+    }
+
+    context_instance = RequestContext(request)
+
+    response = render_to_response(template, dictionary, context_instance)
+    return response
 
 
 def f_no_filter(request):
@@ -30,7 +47,7 @@ def f_no_filter(request):
     }
 
     context_instance = RequestContext(request)
-    template = 'filter/filtered_list.html'
+    template = os.path.join('filter', 'f_generic_list.html')
 
     response = render_to_response(template, dictionary, context_instance)
     return response
@@ -41,23 +58,24 @@ def f_ap_filter(request):
     if request.method == "POST":
         raise Http404
 
+    boundaries = [
+        'price__lte', 'price__gte',
+        'rooms__lte', 'rooms__gte',
+        # ETC ...
+    ]
 
-    _price_lte = int(request.GET.get('price__lte', sys.maxint))
-    _price_gte = int(request.GET.get('price__gte', 0))
+    values = [
+        request.GET.get(boundary, sys.maxint)
+        for boundary in boundaries
+    ]
 
-    _rooms_lte = int(request.GET.get('rooms__lte', sys.maxint))
-    _rooms_gte = int(request.GET.get('rooms__gte', 0))
-
-    #TODO: Find a smarter way
+    filter_kwargs = {
+        boundary: int(value)
+        for boundary, value in zip(boundaries, values)
+    }
 
     properties = Property.objects.all().order_by('timestamp')
-
-    properties = properties.filter(price__lte=_price_lte)
-    properties = properties.filter(price__gte=_price_gte)
-
-    properties = properties.filter(rooms__lte=_rooms_lte)
-    properties = properties.filter(rooms__gte=_rooms_gte)
-
+    properties = properties.filter(**filter_kwargs)
 
     # Workaround to show thumbnail
     for p in properties:
@@ -68,7 +86,7 @@ def f_ap_filter(request):
     }
 
     context_instance = RequestContext(request)
-    template = 'filter/filtered_list.html'
+    template = 'filter/f_generic_list.html'
 
     response = render_to_response(template, dictionary, context_instance)
     return response
