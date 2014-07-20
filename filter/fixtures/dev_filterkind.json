@@ -31,7 +31,7 @@
     "model": "filter.filterkind", 
     "fields": {
         "list_template": "f_generic_list.html", 
-        "form_template": "f_ap_form.html", 
+        "form_template": "f_ll_form.html", 
         "title": "Terrenos"
     }
 }

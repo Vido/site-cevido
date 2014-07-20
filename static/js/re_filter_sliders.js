@@ -10,8 +10,7 @@ function print_price(pi, pf){
     );
 };
 
-
-$(function() {
+function update_price_slider() {
     $( "#slider-price" ).slider({
         range: true,
         min: 0,
@@ -25,10 +24,17 @@ $(function() {
             $("#price__gte").val(ui.values[0]);
             $("#price__lte").val(ui.values[1]);
         }
-    })
-});
+    });
+    print_price(
+        $( "#slider-price" ).slider("values", 0),
+        $( "#slider-price" ).slider("values", 1)
+    );
+    // init hidden values
+    $("#price__gte").val(0);
+    $("#price__lte").val(2500);
+}
 
-/********************** ROOMS *******************************************/
+/********************** Rooms *******************************************/
 
 function print_rooms(nri, nrf){
     $("#rooms").val(
@@ -36,7 +42,7 @@ function print_rooms(nri, nrf){
     );
 };
 
-$(function() {
+function update_rooms_slider() {
     $( "#slider-rooms" ).slider({
         range: true,
         min: 1,
@@ -50,6 +56,19 @@ $(function() {
             $("#rooms__gte").val(ui.values[0]);
             $("#rooms__lte").val(ui.values[1]);
         }
-    })
-});
+    });
+    print_rooms(
+        $( "#slider-rooms" ).slider("values", 0),
+        $( "#slider-rooms" ).slider("values", 1)
+    );
+     // init hidden values
+    $("#rooms__gte").val(1);
+    $("#rooms__lte").val(8);
+};
 
+/********************** Utils *******************************************/
+
+function update_sliders() {
+    update_price_slider();
+    update_rooms_slider();
+};

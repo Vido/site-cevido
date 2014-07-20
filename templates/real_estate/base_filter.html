@@ -13,44 +13,32 @@
     <script src="{{ STATIC_URL }}js/re_filter_sliders.js"></script>
     <script type="text/javascript">
 
-    /*
-    $(function(){
-        print_price(
-            $("#slider-price").slider("values", 0),
-            $("#slider-price").slider("values", 1)
-        );
-
-        print_rooms(
-            $("#slider-rooms").slider("values", 0),
-            $("#slider-rooms").slider("values", 1)
-        );
-    });
-    */
-
+    // init the first list
     $.ajax({
         type: "GET",
         url: "{% url 'filter.views.f_no_filter' %}",
         success: function(data){
             $("#content").html(data);
+            update_sliders();
         }
     });
 
+    // Select the filter
     $(function(){
-            $("#id_which_kind").change(function(){
-                selected_option = $("#id_which_kind").val();
-                selected_option
-                $.ajax({
-                    type: "GET",
-                    data: {
-                        kind: selected_option
-                    },
-                    url: "{% url 'filter.views.f_select_form' %}",
-                    success: function(data){
-                        $("#filter").html(data);
-                    }
-                });
-
+        $("#id_which_kind").change(function(){
+            selected_option = $("#id_which_kind").val();
+            $.ajax({
+                type: "GET",
+                data: {
+                    kind: selected_option
+                },
+                url: "{% url 'filter.views.f_select_form' %}",
+                success: function(data){
+                    $("#filter").html(data);
+                    update_sliders();
+                }
             });
+        });
     });
 
     </script>

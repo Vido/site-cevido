@@ -10,6 +10,23 @@ from real_estate.models import Property
 from filter.models import FilterKind
 
 
+def parse_filter_args(GET, boundaries=[], options=[]):
+
+    values = [
+        GET.get(boundary, sys.maxint)
+        if '__lte' in boundary
+        else GET.get(boundary, 0)
+        for boundary in boundaries
+    ]
+
+    filter_kwargs = {
+        boundary: int(value)
+        for boundary, value in zip(boundaries, values)
+    }
+
+    return filter_kwargs
+
+
 def f_select_form(request):
     if not request.method == "GET":
         raise Http404
@@ -31,7 +48,7 @@ def f_select_form(request):
 
 def f_no_filter(request):
 
-    if request.method == "POST":
+    if not request.method == "GET":
         raise Http404
 
     properties = Property.objects.all()
@@ -55,7 +72,7 @@ def f_no_filter(request):
 
 def f_ap_filter(request):
 
-    if request.method == "POST":
+    if not request.method == "GET":
         raise Http404
 
     boundaries = [
@@ -64,15 +81,38 @@ def f_ap_filter(request):
         # ETC ...
     ]
 
-    values = [
-        request.GET.get(boundary, sys.maxint)
-        for boundary in boundaries
+    filter_kwargs = parse_filter_args(request.GET, boundaries)
+
+    properties = Property.objects.all().order_by('timestamp')
+    properties = properties.filter(**filter_kwargs)
+
+    # Workaround to show thumbnail
+    for p in properties:
+        p.thumbnail = p.photo_gallery.photos.all()[0].get_thumbnail_url
+
+    dictionary = {
+       'property_list': properties,
+    }
+
+    context_instance = RequestContext(request)
+    template = 'filter/f_generic_list.html'
+
+    response = render_to_response(template, dictionary, context_instance)
+    return response
+
+
+# land lot
+def f_ll_filter(request):
+
+    if not request.method == "GET":
+        raise Http404
+
+    boundaries = [
+        'price__lte', 'price__gte',
+        'area__lte', 'area__gte',
     ]
 
-    filter_kwargs = {
-        boundary: int(value)
-        for boundary, value in zip(boundaries, values)
-    }
+    filter_kwargs = parse_filter_args(request.GET, boundaries)
 
     properties = Property.objects.all().order_by('timestamp')
     properties = properties.filter(**filter_kwargs)
