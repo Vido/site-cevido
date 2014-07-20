@@ -1,37 +1,46 @@
 [
 {
-    "pk": 1, 
-    "model": "filter.filterkind", 
+    "pk": 1,
+    "model": "filter.filterkind",
     "fields": {
-        "list_template": "f_generic_list.html", 
-        "form_template": "f_ap_form.html", 
+        "list_template": "",
+        "form_template": "",
+        "title": "Sel. Categoria"
+    }
+},
+{
+    "pk": 2,
+    "model": "filter.filterkind",
+    "fields": {
+        "list_template": "f_generic_list.html",
+        "form_template": "f_ap_form.html",
         "title": "Casas"
     }
 },
 {
-    "pk": 2, 
-    "model": "filter.filterkind", 
+    "pk": 3,
+    "model": "filter.filterkind",
     "fields": {
-        "list_template": "f_generic_list.html", 
-        "form_template": "f_ap_form.html", 
+        "list_template": "f_generic_list.html",
+        "form_template": "f_ap_form.html",
         "title": "Apartamentos"
     }
 },
 {
-    "pk": 3, 
-    "model": "filter.filterkind", 
+    "pk": 4,
+    "model": "filter.filterkind",
     "fields": {
-        "list_template": "f_generic_list.html", 
-        "form_template": "f_ap_form.html", 
+        "list_template": "f_generic_list.html",
+        "form_template": "f_ap_form.html",
         "title": "Casa ou Apartamentos"
     }
 },
 {
-    "pk": 4, 
-    "model": "filter.filterkind", 
+    "pk": 5,
+    "model": "filter.filterkind",
     "fields": {
-        "list_template": "f_generic_list.html", 
-        "form_template": "f_ll_form.html", 
+        "list_template": "f_generic_list.html",
+        "form_template": "f_ll_form.html",
         "title": "Terrenos"
     }
 }

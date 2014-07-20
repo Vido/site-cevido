@@ -4,8 +4,10 @@
        ->  Injects Ajax data on content div
 */
 
-$(document).ready( function(){
-    $("#filterform").submit( function(e){
+$(document).ready(redirect_action_via_ajax);
+
+function redirect_action_via_ajax(){
+    $("#filterform").submit(function(e){
         e.preventDefault();
 
         $.ajax({
@@ -19,5 +21,4 @@ $(document).ready( function(){
 
         return false;
     });
-});
-
+};

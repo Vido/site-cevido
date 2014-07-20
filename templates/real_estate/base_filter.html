@@ -20,6 +20,7 @@
         success: function(data){
             $("#content").html(data);
             update_sliders();
+            redirect_action_via_ajax();
         }
     });
 
@@ -36,6 +37,7 @@
                 success: function(data){
                     $("#filter").html(data);
                     update_sliders();
+                    redirect_action_via_ajax();
                 }
             });
         });

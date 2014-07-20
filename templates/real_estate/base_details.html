@@ -18,16 +18,14 @@
 
     </br>
     Mostre interesse por este imovel!
-    <form id="contactform" action="{% url "real_estate.views.re_contact" %}" method="GET">
-
-    <textarea name="description" rows="4" cols="34">{{ description }}</textarea></br>
-    <input name="pk" type="hidden" value="{{ property.pk }}"></br>
-    Nome: <input name="name" size="30"></br>
-    Email: <input name="email" size="30"></br>
-    Fone: <input name="phone" size="30"></br>
-    Receber mais informações? <input value="newsletter" type="checkbox" checked="checked"></br>
-    <input value="Contato" type="submit"/></br>
-
+    <form id="contactform" action="{% url 'real_estate.views.re_contact' property.id%}" method="GET">
+        <textarea name="description" rows="4" cols="34">{{ description }}</textarea></br>
+        <input name="pk" type="hidden" value="{{ property.pk }}"></br>
+        Nome: <input name="name" size="30"></br>
+        Email: <input name="email" size="30"></br>
+        Fone: <input name="phone" size="30"></br>
+        Receber mais informações? <input value="newsletter" type="checkbox" checked="checked"></br>
+        <input value="Contato" type="submit"/></br>
     </form>
 
 {% endblock %}
