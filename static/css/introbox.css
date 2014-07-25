@@ -31,7 +31,8 @@
     margin: 3%;
     height: 65%;
     background-color:#202530;
-    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 #introbox table{
