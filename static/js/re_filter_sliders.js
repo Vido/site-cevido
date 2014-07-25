@@ -1,5 +1,5 @@
 /*
-    TODO: What is this file
+    Defines dynamic JQueryUI HTML components behavior.
 */
 
 /********************** Price *******************************************/
@@ -71,4 +71,44 @@ function update_rooms_slider() {
 function update_sliders() {
     update_price_slider();
     update_rooms_slider();
+};
+
+/********************** Area *******************************************/
+
+function print_area(nri, nrf){
+    $("#area").val(
+        "De " + nri + "m² a " + nrf + "m²"
+    );
+};
+
+function update_area_slider() {
+    $( "#slider-area" ).slider({
+        range: true,
+        min: 10,
+        max: 1000,
+        step: 1,
+        values: [ 45, 250 ],
+        slide: function( event, ui ) {
+            // Show values
+            print_area(ui.values[0], ui.values[1]);
+             // GET Request
+            $("#area__gte").val(ui.values[0]);
+            $("#area__lte").val(ui.values[1]);
+        }
+    });
+    print_area(
+        $( "#slider-area" ).slider("values", 0),
+        $( "#slider-area" ).slider("values", 1)
+    );
+     // init hidden values
+    $("#area__gte").val(45);
+    $("#area__lte").val(250);
+};
+
+/********************** Utils *******************************************/
+
+function update_sliders() {
+    update_price_slider();
+    update_rooms_slider();
+    update_area_slider();
 };
