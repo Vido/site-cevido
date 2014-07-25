@@ -13,6 +13,6 @@ wget https://raw.github.com/pypa/pip/master/contrib/get-pip.py
 python get-pip.py
 
 pip install pytz
-pip install django
-pip install django-photologue
+pip install django            # VERSION == (1, 5, 1, 'final', 0) on KingHost
+pip install django-photologue # __version__ == '2.8' on KingHost
 
