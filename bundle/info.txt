@@ -1,0 +1,4 @@
+ALT_HOST="cevido.web761.kinghost.net"
+PASS="" # u***********9
+SERVICE_CODE="prestimônio"
+SSH_HOST="cevido@cevido.web761.kinghost.net"
