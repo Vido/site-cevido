@@ -90,6 +90,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     BASE_DIR + '/static/',
 )
+STATIC_ROOT = 'home/cevido/www/static/'
 
 MEDIA_ROOT = BASE_DIR + '/media/'
 MEDIA_URL = '/media/'

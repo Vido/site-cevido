@@ -1,0 +1,24 @@
+<form id="filterform" action="{% url 'filter.views.f_ll_filter' %}" method="GET">
+    <input id="price__gte" name="price__gte" value="" type="hidden"/>
+    <input id="price__lte" name="price__lte" value="" type="hidden"/>
+
+    <input id="area__gte" name="area__gte" value="" type="hidden"/>
+    <input id="area__lte" name="area__lte" value="" type="hidden"/>
+
+    <input id="list_template" name="list_template"
+        value="{{ list_template }}" type="hidden"/>
+
+    <p>
+        <label for="price">Preço:</label> <input type="text" id="price"
+        size="27">
+    </p>
+    <div id="slider-price"></div>
+
+    <p>
+        <label for="area">Área(m²):</label>  <input type="text" id="area"
+        size="27">
+    </p>
+    <div id="slider-area"></div>
+
+    <input value="Buscar" type="submit"/></br>
+</form>
