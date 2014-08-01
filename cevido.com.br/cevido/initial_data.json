@@ -1,0 +1,20 @@
+[
+{
+    "pk": 1, 
+    "model": "auth.user", 
+    "fields": {
+        "username": "cevido", 
+        "first_name": "", 
+        "last_name": "", 
+        "is_active": true, 
+        "is_superuser": true, 
+        "is_staff": true, 
+        "last_login": "2014-07-31T23:54:18.425Z", 
+        "groups": [], 
+        "user_permissions": [], 
+        "password": "pbkdf2_sha256$12000$BxuI07glFaty$xPBrsFWCcgLBtQdd/p8ABYTAMSGY0PcRn48dm3aGfK4=", 
+        "email": "vido@usp.br", 
+        "date_joined": "2014-07-31T23:54:18.425Z"
+    }
+}
+]
