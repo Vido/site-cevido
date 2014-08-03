@@ -86,14 +86,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
-STATIC_URL = '/static/'
-STATICFILES_DIRS = (
-    BASE_DIR + '/static/',
-)
-STATIC_ROOT = 'home/cevido/www/static/'
+STATIC_URL = 'static/'
+#STATICFILES_DIRS = (
+#    BASE_DIR + '/static/',
+#)
+STATIC_ROOT = BASE_DIR + '/static/'
 
 MEDIA_ROOT = BASE_DIR + '/media/'
-MEDIA_URL = '/media/'
+MEDIA_URL = 'media/'
 
 TEMPLATE_DIRS = (
     BASE_DIR + '/templates/'
