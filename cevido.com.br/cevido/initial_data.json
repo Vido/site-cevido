@@ -9,12 +9,12 @@
         "is_active": true, 
         "is_superuser": true, 
         "is_staff": true, 
-        "last_login": "2014-07-31T23:54:18.425Z", 
+        "last_login": "2014-08-04T01:53:11.701Z", 
         "groups": [], 
         "user_permissions": [], 
-        "password": "pbkdf2_sha256$12000$BxuI07glFaty$xPBrsFWCcgLBtQdd/p8ABYTAMSGY0PcRn48dm3aGfK4=", 
+        "password": "pbkdf2_sha256$12000$YCBnb2V08jbo$vqNTP6FkRVoTZb1elkK07/o20vsGIVCbqoPPkX3yql0=", 
         "email": "vido@usp.br", 
-        "date_joined": "2014-07-31T23:54:18.425Z"
+        "date_joined": "2014-08-04T01:52:53.396Z"
     }
 }
 ]

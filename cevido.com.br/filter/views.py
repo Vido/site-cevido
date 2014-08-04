@@ -41,7 +41,6 @@ def f_select_form(request):
     }
 
     context_instance = RequestContext(request)
-
     response = render_to_response(template, dictionary, context_instance)
     return response
 
