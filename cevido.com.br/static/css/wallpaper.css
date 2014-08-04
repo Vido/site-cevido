@@ -3,6 +3,23 @@ html,body{
     height: 100%
 }
 
+#login_holder{
+    float: right;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 3%;
+    margin-left: 3%;
+    font-size:100%;
+    color:#FFFFFF;
+    background-color:#202530;
+    width: 94%; /* fill the full width of browser */
+}
+#login_holder a{
+    text-decoration: none;
+    margin-right: 3%;
+    float: right;
+    color: inherit;
+} /* !important */
+
 #wallpaper{
     position: fixed; /* make it stay in the same place, regardless of scrolling */
     z-index: -1; /* put it under everything*/

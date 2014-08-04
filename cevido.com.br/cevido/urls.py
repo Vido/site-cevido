@@ -18,7 +18,7 @@ urlpatterns = patterns('',
     url(r'^filter/', include('filter.urls')),
 )
 
-if settings.DEBUG:
+if not settings.PRODUCTION:
     from django import get_version
     if int(get_version().split('.')[1]) >= 6:
         urlpatterns += patterns('',

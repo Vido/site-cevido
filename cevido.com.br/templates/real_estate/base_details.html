@@ -1,16 +1,17 @@
 {% extends "base_two_columns.html" %}
+{% load static from staticfiles %}
 
 {% block stylesheets %}
     {{ block.super }}
 
-    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/details.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="{% static "css/details.css"%}"  media="screen" />
 
 {% endblock %}
 
 {% block scripts %}
     {{ block.super }}
 
-    <script src="{{ STATIC_URL }}js/re_photo_galery.js"></script>
+    <script src="{% static "js/re_photo_galery.js" %}"></script>
 
 {% endblock %}
 

@@ -1,3 +1,4 @@
+{% load static from staticfiles %}
 <form id="filterform" action="{% url 'filter.views.f_ap_filter' %}" method="GET">
     <input id="price__gte" name="price__gte" value="" type="hidden"/>
     <input id="price__lte" name="price__lte" value="" type="hidden"/>

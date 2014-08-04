@@ -23,8 +23,9 @@ SECRET_KEY = 'ir_9$lk-@*o4xfji)0w8g68yps!+ox968p8z$amanhbuia3g1m'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
 TEMPLATE_DEBUG = True
+
+PRODUCTION = 'PRODUCTION' in os.listdir(BASE_DIR)
 
 ALLOWED_HOSTS = []
 
@@ -86,16 +87,22 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
-STATIC_URL = 'static/'
-#STATICFILES_DIRS = (
-#    BASE_DIR + '/static/',
-#)
-STATIC_ROOT = BASE_DIR + '/static/'
+STATIC_ROOT = '/static/'
+if PRODUCTION:
+    STATIC_URL = 'http://static.cevido.com.br/'
+else:
+    STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    BASE_DIR + '/static/',
+)
 
 MEDIA_ROOT = BASE_DIR + '/media/'
-MEDIA_URL = 'media/'
+if PRODUCTION:
+    MEDIA_URL = 'http://media.cevido.com.br/'
+else:
+    MEDIA_URL = '/media/'
 
 TEMPLATE_DIRS = (
     BASE_DIR + '/templates/'
 )
-

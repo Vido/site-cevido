@@ -1,11 +1,11 @@
 {% extends "base.html" %}
+{% load static from staticfiles %}
 
 {% block stylesheets %}
 
-    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/h_nav_bar.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/introbox.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/wallpaper.css" media="screen" />
-
+    <link rel="stylesheet" type="text/css" href="{% static "css/h_nav_bar.css" %}" media="screen" />
+    <link rel="stylesheet" type="text/css" href="{% static "css/introbox.css" %}"  media="screen" />
+    <link rel="stylesheet" type="text/css" href="{% static "css/wallpaper.css" %}" media="screen" />
     <!--
     /* http://themeforest.net/item/full-state-responsive-and-bootstrap-real-state/4800556?WT.ac=solid_search_item&WT.seg_1=solid_search_item&WT.z_author=iwthemes */
     -->
@@ -15,8 +15,12 @@
 
 <div id=holder>
 
+    <div id=login_holder>
+        <a href="/admin">LOGIN</a>
+    </div>
+
     <div id="wallpaper">
-        <img src="{{ STATIC_URL }}wallpaper/{{ wallpaper }}" alt="">
+        <img src="{% static "wallpaper/"%}{{wallpaper}}" alt="">
     </div>
 
     <div id="lowerholder">
