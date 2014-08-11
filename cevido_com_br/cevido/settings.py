@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.sites',
     'photologue',
+    'sortedm2m',
     'south',
     'newsletter',
     'real_estate',
@@ -57,7 +58,8 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'cevido.urls'
 
-WSGI_APPLICATION = 'cevido.wsgi.application'
+if PRODUCTION:
+    WSGI_APPLICATION = 'cevido.wsgi.application'
 
 
 # Database

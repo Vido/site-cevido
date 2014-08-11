@@ -6,7 +6,27 @@ from django.contrib.auth.models import User
 
 from photologue.models import Gallery
 
-# Create your models here.
+
+class Owner(models.Model):
+    name = models.CharField(max_length=64)
+    email = models.EmailField(blank=True, null=True)
+    mobile_phone = models.CharField(max_length=20, blank=True, null=True)
+    comercial_phone = models.CharField(max_length=20, blank=True, null=True)
+    residential_phone = models.CharField(max_length=20, blank=True, null=True)
+
+    def __unicode__(self):
+        return self.__repr__()
+
+    def __repr__(self):
+        if self.mobile_phone:
+            return '%s (Cel: %s)' % (self.name, self.mobile_phone)
+        elif self.comercial_phone:
+            return '%s (TelCm: %s)' % (self.name, self.comercial_phone)
+        elif self.residential_phone:
+            return '%s (TelRs: %s)' % (self.name, self.residential_phone)
+
+        return self.name
+
 class Property(models.Model):
 
     CATEGORY = (
@@ -19,15 +39,7 @@ class Property(models.Model):
         ('F', 'Fazenda'),
     )
 
-    # Reference number
-    #owner = models.ForeignKey(User)
-
-    timestamp = models.DateTimeField(auto_now_add=True)
-    is_active = models.BooleanField(default=True)
-    clicks = models.IntegerField(default=0)
-    photo_gallery = models.OneToOneField(Gallery, primary_key=False)
-
-    email = models.EmailField(unique=False, null=False)
+    owner = models.ForeignKey(Owner)
     address = models.TextField(null=False)
     category = models.CharField(max_length=1, choices=CATEGORY)
 
@@ -38,14 +50,22 @@ class Property(models.Model):
     rooms = models.IntegerField(default=0)
     wc = models.IntegerField(default=0)
     garage = models.IntegerField(default=0)
-
     area = models.IntegerField(default=0)
     unit = models.CharField(max_length=10, default='m²')
+
     city = models.TextField(null=True)
     neighborhood = models.TextField(null=True)
+    photo_gallery = models.OneToOneField(Gallery, primary_key=False)
+
+    timestamp = models.DateTimeField(auto_now_add=True)
+    is_active = models.BooleanField(default=True)
+    clicks = models.IntegerField(default=0)
 
     def verbose_category(self):
         return dict(Property.CATEGORY)[self.category]
+
+    def __unicode__(self):
+        return self.__repr__()
 
     def __repr__(self):
         catg_name = [c for c in self.CATEGORY if c[0] == self.category]
