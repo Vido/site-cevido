@@ -55,11 +55,18 @@ class Property(models.Model):
 
     city = models.TextField(null=True)
     neighborhood = models.TextField(null=True)
-    photo_gallery = models.OneToOneField(Gallery, primary_key=False)
+    photo_gallery = models.ForeignKey(Gallery, blank=True, null=True)
 
     timestamp = models.DateTimeField(auto_now_add=True)
     is_active = models.BooleanField(default=True)
     clicks = models.IntegerField(default=0)
+
+    def save(self):
+        if self.photo_gallery is None:
+            # This comes from the initial fixtures
+            self.photo_gallery_id = 1
+
+        super(Property, self).save()
 
     def verbose_category(self):
         return dict(Property.CATEGORY)[self.category]

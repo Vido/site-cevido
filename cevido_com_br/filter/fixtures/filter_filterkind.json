@@ -3,8 +3,8 @@
     "pk": 1,
     "model": "filter.filterkind",
     "fields": {
-        "list_template": "",
-        "form_template": "",
+        "list_template": "f_generic_list.html",
+        "form_template": "f_no_form.html",
         "title": "Sel. Categoria"
     }
 },
