@@ -39,12 +39,11 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
-    'photologue',
-    'sortedm2m',
     'south',
     'newsletter',
     'real_estate',
     'filter',
+    'photo',
 )
 
 MIDDLEWARE_CLASSES = (

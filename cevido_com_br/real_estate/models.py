@@ -3,9 +3,9 @@
 from django.db import models
 from django.core.urlresolvers import reverse
 from django.contrib.auth.models import User
+from django.contrib.contenttypes import generic
 
-from photologue.models import Gallery
-
+from photo.models import Photo
 
 class Owner(models.Model):
     name = models.CharField(max_length=64)
@@ -43,30 +43,29 @@ class Property(models.Model):
     address = models.TextField(null=False)
     category = models.CharField(max_length=1, choices=CATEGORY)
 
-    price = models.IntegerField()
-    condo = models.IntegerField(default=0)
-    rent = models.IntegerField(default=0)
+    price = models.PositiveIntegerField()
+    condo = models.PositiveIntegerField(default=0)
+    rent = models.PositiveIntegerField(default=0)
 
-    rooms = models.IntegerField(default=0)
-    wc = models.IntegerField(default=0)
-    garage = models.IntegerField(default=0)
-    area = models.IntegerField(default=0)
+    rooms = models.PositiveIntegerField(default=0)
+    wc = models.PositiveIntegerField(default=0)
+    garage = models.PositiveIntegerField(default=0)
+    area = models.PositiveIntegerField(default=0)
     unit = models.CharField(max_length=10, default='m²')
 
     city = models.TextField(null=True)
     neighborhood = models.TextField(null=True)
-    photo_gallery = models.ForeignKey(Gallery, blank=True, null=True)
+    photo_gallery = generic.GenericRelation(Photo, blank=True, null=True)
 
     timestamp = models.DateTimeField(auto_now_add=True)
     is_active = models.BooleanField(default=True)
-    clicks = models.IntegerField(default=0)
+    clicks = models.PositiveIntegerField(editable=False, default=0)
 
-    def save(self):
-        if self.photo_gallery is None:
-            # This comes from the initial fixtures
-            self.photo_gallery_id = 1
-
-        super(Property, self).save()
+    #def save(self):
+    #    if self.photo_gallery is None:
+    #        # This comes from the initial fixtures
+    #        self.photo_gallery_id = 1
+    #    super(Property, self).save()
 
     def verbose_category(self):
         return dict(Property.CATEGORY)[self.category]

@@ -9,7 +9,7 @@ from django.shortcuts import redirect
 from django.http import HttpResponse
 from django.http import Http404
 
-from photologue.models import Photo
+#from photologue.models import Photo
 
 from real_estate.models import Property
 from filter.models import FilterKind
@@ -87,7 +87,7 @@ def re_photos(request, photo_pk):
     if request.method == 'POST':
         raise Http404
 
-    photo = Photo.objects.get(pk=photo_pk)
+    photo = [] # Photo.objects.get(pk=photo_pk)
     dictionary = {
         'get_display_url': photo.get_display_url(),
     }

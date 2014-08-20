@@ -1,6 +1,11 @@
 from django.contrib import admin
+
 from real_estate.models import Property
 from real_estate.models import Owner
 
-admin.site.register(Property)
+
+class PropertyAdmin(admin.ModelAdmin):
+    inlines = [ImagesInline]
+
 admin.site.register(Owner)
+admin.site.register(Property, PropertyAdmin)
