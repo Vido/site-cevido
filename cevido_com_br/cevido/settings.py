@@ -40,10 +40,12 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.sites',
     'south',
+    'mptt',
+    'easy_thumbnails',
+    'filer',
     'newsletter',
     'real_estate',
     'filter',
-    'photo',
 )
 
 MIDDLEWARE_CLASSES = (

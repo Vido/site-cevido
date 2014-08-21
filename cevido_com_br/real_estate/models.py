@@ -2,10 +2,8 @@
 
 from django.db import models
 from django.core.urlresolvers import reverse
-from django.contrib.auth.models import User
-from django.contrib.contenttypes import generic
 
-from photo.models import Photo
+from filer.fields.image import FilerImageField
 
 class Owner(models.Model):
     name = models.CharField(max_length=64)
@@ -26,6 +24,7 @@ class Owner(models.Model):
             return '%s (TelRs: %s)' % (self.name, self.residential_phone)
 
         return self.name
+
 
 class Property(models.Model):
 
@@ -55,7 +54,6 @@ class Property(models.Model):
 
     city = models.TextField(null=True)
     neighborhood = models.TextField(null=True)
-    photo_gallery = generic.GenericRelation(Photo, blank=True, null=True)
 
     timestamp = models.DateTimeField(auto_now_add=True)
     is_active = models.BooleanField(default=True)
@@ -84,4 +82,8 @@ class Property(models.Model):
     @models.permalink
     def get_absolute_url(self):
         return ('real_estate.views.re_details', [str(self.pk)])
+
+class Photo(models.Model):
+    image_file = FilerImageField()
+    fk_property = models.ForeignKey(Property)
 

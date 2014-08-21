@@ -46,12 +46,12 @@ def re_details(request, property_pk):
     template_descr = u"Olá, tenho interesse no imovel {address}"
     description = template_descr.format(**context_descr)
 
-    thumbnail_list = property.photo_gallery.photos.all()
+    #thumbnail_list = property.photo_gallery.photos.all()
 
     dictionary = {
         'property': property,
         'description': description,
-        'thumbnails_list': thumbnail_list,
+    #    'thumbnails_list': thumbnail_list,
     }
 
     context_instance = RequestContext(request)
