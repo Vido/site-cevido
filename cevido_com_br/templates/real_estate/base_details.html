@@ -51,13 +51,12 @@
     <div style="clear:both"></div>
 
     <div>
-        {% for thumbnail in thumbnails_list %}
+        {% for photo in photo_list %}
         <!-- TODO: Make the ajax link here. -->
-        <a class="call_photo_ajax" href="{% url 'real_estate.views.re_photos' thumbnail.pk %}">
-            <img src="{{ MEDIA_ROOT }}{{ thumbnail.get_thumbnail_url }}">
+        <a class="call_photo_ajax" href="{% url 'real_estate.views.re_photos' photo.pk %}">
+            <img src="{{ MEDIA_ROOT }}{{ photo.thumbnail.url }}">
         </a>
         {% endfor %}
     </div>
 
 {% endblock %}
-

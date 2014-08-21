@@ -4,6 +4,8 @@ from django.db import models
 from django.core.urlresolvers import reverse
 
 from filer.fields.image import FilerImageField
+from easy_thumbnails.fields import ThumbnailerImageField
+
 
 class Owner(models.Model):
     name = models.CharField(max_length=64)
@@ -86,4 +88,9 @@ class Property(models.Model):
 class Photo(models.Model):
     image_file = FilerImageField()
     fk_property = models.ForeignKey(Property)
+
+    @property
+    def thumbnail(self):
+        options = {'size': (140, 120), 'crop': True}
+        return self.image_file.easy_thumbnails_thumbnailer.get_thumbnail(options)
 

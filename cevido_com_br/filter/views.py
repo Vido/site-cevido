@@ -7,11 +7,11 @@ from django.template import RequestContext
 from django.http import Http404
 
 from real_estate.models import Property
+from real_estate.models import Photo
 from filter.models import FilterKind
 
 
 def parse_filter_args(GET, boundaries=[], options=[]):
-
     values = [
         GET.get(boundary, sys.maxint)
         if '__lte' in boundary
@@ -25,6 +25,14 @@ def parse_filter_args(GET, boundaries=[], options=[]):
     }
 
     return filter_kwargs
+
+
+def monkey_patch_thumbnails(property_list):
+    # Workaround to show thumbnail
+    for p in property_list:
+        photo_list = Photo.objects.filter(fk_property=p)
+        p.thumbnail = photo_list[0].thumbnail.url
+    return property_list
 
 
 def f_select_form(request):
@@ -45,32 +53,34 @@ def f_select_form(request):
     return response
 
 
-def f_no_filter(request):
+def generic_boundary_filter(request, boundaries=[],
+        template_filename='f_generic_list.html'):
 
-    if not request.method == "GET":
-        raise Http404
+    filter_kwargs = parse_filter_args(request.GET, boundaries)
 
-    properties = Property.objects.all()
-
-    # Workaround to show thumbnail
-    for p in properties:
-        p.thumbnail = p.photo_gallery.photos.all()[0].get_thumbnail_url
-
-    #random.shuffle(list(properties))
+    properties = Property.objects.all().order_by('timestamp')
+    properties = properties.filter(**filter_kwargs)
+    properties = monkey_patch_thumbnails(properties)
 
     dictionary = {
        'property_list': properties,
     }
 
     context_instance = RequestContext(request)
-    template = os.path.join('filter', 'f_generic_list.html')
+    template = os.path.join('filter', template_filename)
 
     response = render_to_response(template, dictionary, context_instance)
     return response
 
 
-def f_ap_filter(request):
+def f_no_filter(request):
+    if not request.method == "GET":
+        raise Http404
 
+    return generic_boundary_filter(request)
+
+# apartment
+def f_ap_filter(request):
     if not request.method == "GET":
         raise Http404
 
@@ -80,29 +90,10 @@ def f_ap_filter(request):
         # ETC ...
     ]
 
-    filter_kwargs = parse_filter_args(request.GET, boundaries)
-
-    properties = Property.objects.all().order_by('timestamp')
-    properties = properties.filter(**filter_kwargs)
-
-    # Workaround to show thumbnail
-    for p in properties:
-        p.thumbnail = p.photo_gallery.photos.all()[0].get_thumbnail_url
-
-    dictionary = {
-       'property_list': properties,
-    }
-
-    context_instance = RequestContext(request)
-    template = 'filter/f_generic_list.html'
-
-    response = render_to_response(template, dictionary, context_instance)
-    return response
-
+    return generic_boundary_filter(request, boundaries)
 
 # land lot
 def f_ll_filter(request):
-
     if not request.method == "GET":
         raise Http404
 
@@ -111,22 +102,7 @@ def f_ll_filter(request):
         'area__lte', 'area__gte',
     ]
 
-    filter_kwargs = parse_filter_args(request.GET, boundaries)
+    return generic_boundary_filter(request, boundaries)
 
-    properties = Property.objects.all().order_by('timestamp')
-    properties = properties.filter(**filter_kwargs)
 
-    # Workaround to show thumbnail
-    for p in properties:
-        p.thumbnail = p.photo_gallery.photos.all()[0].get_thumbnail_url
-
-    dictionary = {
-       'property_list': properties,
-    }
-
-    context_instance = RequestContext(request)
-    template = 'filter/f_generic_list.html'
-
-    response = render_to_response(template, dictionary, context_instance)
-    return response
 

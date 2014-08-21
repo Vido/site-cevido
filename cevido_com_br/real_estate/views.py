@@ -9,9 +9,8 @@ from django.shortcuts import redirect
 from django.http import HttpResponse
 from django.http import Http404
 
-#from photologue.models import Photo
-
 from real_estate.models import Property
+from real_estate.models import Photo
 from filter.models import FilterKind
 from filter.forms import KindForm
 
@@ -33,25 +32,21 @@ def re_index(request):
 
 
 def re_details(request, property_pk):
-
     try:
-        property = Property.objects.get(pk=property_pk)
+        this_property = Property.objects.get(pk=property_pk)
     except:
         raise Http404
 
-
-    context_descr = {
-        'address': property.address,
-    }
+    context_descr = { 'address': this_property.address, }
     template_descr = u"Olá, tenho interesse no imovel {address}"
     description = template_descr.format(**context_descr)
 
-    #thumbnail_list = property.photo_gallery.photos.all()
+    photo_list = Photo.objects.filter(fk_property=this_property)
 
     dictionary = {
-        'property': property,
+        'property': this_property,
         'description': description,
-    #    'thumbnails_list': thumbnail_list,
+        'photo_list': photo_list,
     }
 
     context_instance = RequestContext(request)
@@ -87,9 +82,9 @@ def re_photos(request, photo_pk):
     if request.method == 'POST':
         raise Http404
 
-    photo = [] # Photo.objects.get(pk=photo_pk)
+    photo = Photo.objects.get(pk=photo_pk)
     dictionary = {
-        'get_display_url': photo.get_display_url(),
+        'get_display_url': photo.image_file.url,
     }
 
     response = HttpResponse(
