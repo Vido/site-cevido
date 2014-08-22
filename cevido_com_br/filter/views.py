@@ -31,7 +31,8 @@ def monkey_patch_thumbnails(property_list):
     # Workaround to show thumbnail
     for p in property_list:
         photo_list = Photo.objects.filter(fk_property=p)
-        p.thumbnail = photo_list[0].thumbnail.url
+        if photo_list:
+            p.thumbnail = photo_list[0].thumbnail.url
     return property_list
 
 
@@ -103,6 +104,4 @@ def f_ll_filter(request):
     ]
 
     return generic_boundary_filter(request, boundaries)
-
-
 
