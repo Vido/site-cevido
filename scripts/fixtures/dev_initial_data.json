@@ -1,0 +1,2437 @@
+[
+{
+    "pk": 1, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "logentry", 
+        "name": "log entry", 
+        "app_label": "admin"
+    }
+},
+{
+    "pk": 2, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "permission", 
+        "name": "permission", 
+        "app_label": "auth"
+    }
+},
+{
+    "pk": 3, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "group", 
+        "name": "group", 
+        "app_label": "auth"
+    }
+},
+{
+    "pk": 4, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "user", 
+        "name": "user", 
+        "app_label": "auth"
+    }
+},
+{
+    "pk": 5, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "contenttype", 
+        "name": "content type", 
+        "app_label": "contenttypes"
+    }
+},
+{
+    "pk": 6, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "session", 
+        "name": "session", 
+        "app_label": "sessions"
+    }
+},
+{
+    "pk": 7, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "site", 
+        "name": "site", 
+        "app_label": "sites"
+    }
+},
+{
+    "pk": 8, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "migrationhistory", 
+        "name": "migration history", 
+        "app_label": "south"
+    }
+},
+{
+    "pk": 9, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "subscriber", 
+        "name": "subscriber", 
+        "app_label": "newsletter"
+    }
+},
+{
+    "pk": 10, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "owner", 
+        "name": "owner", 
+        "app_label": "real_estate"
+    }
+},
+{
+    "pk": 11, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "property", 
+        "name": "property", 
+        "app_label": "real_estate"
+    }
+},
+{
+    "pk": 12, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "photo", 
+        "name": "photo", 
+        "app_label": "real_estate"
+    }
+},
+{
+    "pk": 13, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "filterkind", 
+        "name": "filter kind", 
+        "app_label": "filter"
+    }
+},
+{
+    "pk": 14, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "source", 
+        "name": "source", 
+        "app_label": "easy_thumbnails"
+    }
+},
+{
+    "pk": 15, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "thumbnail", 
+        "name": "thumbnail", 
+        "app_label": "easy_thumbnails"
+    }
+},
+{
+    "pk": 16, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "thumbnaildimensions", 
+        "name": "thumbnail dimensions", 
+        "app_label": "easy_thumbnails"
+    }
+},
+{
+    "pk": 17, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "folder", 
+        "name": "Folder", 
+        "app_label": "filer"
+    }
+},
+{
+    "pk": 18, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "folderpermission", 
+        "name": "folder permission", 
+        "app_label": "filer"
+    }
+},
+{
+    "pk": 19, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "file", 
+        "name": "file", 
+        "app_label": "filer"
+    }
+},
+{
+    "pk": 20, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "clipboard", 
+        "name": "clipboard", 
+        "app_label": "filer"
+    }
+},
+{
+    "pk": 21, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "clipboarditem", 
+        "name": "clipboard item", 
+        "app_label": "filer"
+    }
+},
+{
+    "pk": 22, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "image", 
+        "name": "image", 
+        "app_label": "filer"
+    }
+},
+{
+    "pk": "0r60m1yy89vxr38732ii2jer57usi1t6", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2014-10-22T11:33:02.486Z", 
+        "session_data": "YzU0OGRlMWJiZjRlOWYzY2I3MTU5ZjIxMDk0Y2E5NDAxOTFhMDcwNzqAAn1xAVgKAAAAdGVzdGNvb2tpZXECWAYAAAB3b3JrZWRxA3Mu"
+    }
+},
+{
+    "pk": "6kjxjf41ci0087mvk41t9i7e5wm2cfcr", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2015-01-09T23:11:39.723Z", 
+        "session_data": "MzU4NGIxZDQ5ZmNmZDVjOGQxNmY5N2MxOGFhNTlkNGRkNThiYWViZTqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQRLAXUu"
+    }
+},
+{
+    "pk": "bhqz4lsb3gfmnqyfrbtq44073utocms6", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2014-11-18T19:55:30.203Z", 
+        "session_data": "MDk2MmFhOTBkMGYwY2Y5OGZhNTNkOWQzODJhYzVlZGUwNTU1ZDUzZDqAAn1xAS4="
+    }
+},
+{
+    "pk": "fude8h5n99cx3qoqikcn1zfhhpf8ny25", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2014-09-23T14:41:44.945Z", 
+        "session_data": "ZGU3NzQ1ZDNiMGRhZTY1ZjRhZjFlNDMzZTgwNDQ4NjhhOGRhOTU5MTqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZFUpZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmRVDV9hdXRoX3VzZXJfaWRLAVgUAAAAZmlsZXJfbGFzdF9mb2xkZXJfaWROdS4="
+    }
+},
+{
+    "pk": "pje4k2wpw27zpo7y7ycbl0va29h0jjyr", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2014-10-22T11:33:02.757Z", 
+        "session_data": "YzU0OGRlMWJiZjRlOWYzY2I3MTU5ZjIxMDk0Y2E5NDAxOTFhMDcwNzqAAn1xAVgKAAAAdGVzdGNvb2tpZXECWAYAAAB3b3JrZWRxA3Mu"
+    }
+},
+{
+    "pk": "zev04416eew780b1y9ekan508k5xtg4a", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2014-11-03T13:17:06.955Z", 
+        "session_data": "MzU4NGIxZDQ5ZmNmZDVjOGQxNmY5N2MxOGFhNTlkNGRkNThiYWViZTqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQRLAXUu"
+    }
+},
+{
+    "pk": 1, 
+    "model": "sites.site", 
+    "fields": {
+        "domain": "cevido.com.br", 
+        "name": "cevido"
+    }
+},
+{
+    "pk": 1, 
+    "model": "south.migrationhistory", 
+    "fields": {
+        "applied": "2014-08-22T19:58:04.336Z", 
+        "app_name": "easy_thumbnails", 
+        "migration": "0001_initial"
+    }
+},
+{
+    "pk": 2, 
+    "model": "south.migrationhistory", 
+    "fields": {
+        "applied": "2014-08-22T19:58:04.414Z", 
+        "app_name": "easy_thumbnails", 
+        "migration": "0002_filename_indexes"
+    }
+},
+{
+    "pk": 3, 
+    "model": "south.migrationhistory", 
+    "fields": {
+        "applied": "2014-08-22T19:58:04.468Z", 
+        "app_name": "easy_thumbnails", 
+        "migration": "0003_auto__add_storagenew"
+    }
+},
+{
+    "pk": 4, 
+    "model": "south.migrationhistory", 
+    "fields": {
+        "applied": "2014-08-22T19:58:04.654Z", 
+        "app_name": "easy_thumbnails", 
+        "migration": "0004_auto__add_field_source_storage_new__add_field_thumbnail_storage_new"
+    }
+},
+{
+    "pk": 5, 
+    "model": "south.migrationhistory", 
+    "fields": {
+        "applied": "2014-08-22T19:58:04.853Z", 
+        "app_name": "easy_thumbnails", 
+        "migration": "0005_storage_fks_null"
+    }
+},
+{
+    "pk": 6, 
+    "model": "south.migrationhistory", 
+    "fields": {
+        "applied": "2014-08-22T19:58:04.894Z", 
+        "app_name": "easy_thumbnails", 
+        "migration": "0006_copy_storage"
+    }
+},
+{
+    "pk": 7, 
+    "model": "south.migrationhistory", 
+    "fields": {
+        "applied": "2014-08-22T19:58:05.223Z", 
+        "app_name": "easy_thumbnails", 
+        "migration": "0007_storagenew_fks_not_null"
+    }
+},
+{
+    "pk": 8, 
+    "model": "south.migrationhistory", 
+    "fields": {
+        "applied": "2014-08-22T19:58:05.389Z", 
+        "app_name": "easy_thumbnails", 
+        "migration": "0008_auto__del_field_source_storage__del_field_thumbnail_storage"
+    }
+},
+{
+    "pk": 9, 
+    "model": "south.migrationhistory", 
+    "fields": {
+        "applied": "2014-08-22T19:58:05.436Z", 
+        "app_name": "easy_thumbnails", 
+        "migration": "0009_auto__del_storage"
+    }
+},
+{
+    "pk": 10, 
+    "model": "south.migrationhistory", 
+    "fields": {
+        "applied": "2014-08-22T19:58:05.588Z", 
+        "app_name": "easy_thumbnails", 
+        "migration": "0010_rename_storage"
+    }
+},
+{
+    "pk": 11, 
+    "model": "south.migrationhistory", 
+    "fields": {
+        "applied": "2014-08-22T19:58:05.726Z", 
+        "app_name": "easy_thumbnails", 
+        "migration": "0011_auto__add_field_source_storage_hash__add_field_thumbnail_storage_hash"
+    }
+},
+{
+    "pk": 12, 
+    "model": "south.migrationhistory", 
+    "fields": {
+        "applied": "2014-08-22T19:58:05.752Z", 
+        "app_name": "easy_thumbnails", 
+        "migration": "0012_build_storage_hashes"
+    }
+},
+{
+    "pk": 13, 
+    "model": "south.migrationhistory", 
+    "fields": {
+        "applied": "2014-08-22T19:58:05.944Z", 
+        "app_name": "easy_thumbnails", 
+        "migration": "0013_auto__del_storage__del_field_source_storage__del_field_thumbnail_stora"
+    }
+},
+{
+    "pk": 14, 
+    "model": "south.migrationhistory", 
+    "fields": {
+        "applied": "2014-08-22T19:58:06.069Z", 
+        "app_name": "easy_thumbnails", 
+        "migration": "0014_auto__add_unique_source_name_storage_hash__add_unique_thumbnail_name_s"
+    }
+},
+{
+    "pk": 15, 
+    "model": "south.migrationhistory", 
+    "fields": {
+        "applied": "2014-08-22T19:58:06.184Z", 
+        "app_name": "easy_thumbnails", 
+        "migration": "0015_auto__del_unique_thumbnail_name_storage_hash__add_unique_thumbnail_sou"
+    }
+},
+{
+    "pk": 16, 
+    "model": "south.migrationhistory", 
+    "fields": {
+        "applied": "2014-08-22T19:58:06.233Z", 
+        "app_name": "easy_thumbnails", 
+        "migration": "0016_auto__add_thumbnaildimensions"
+    }
+},
+{
+    "pk": 17, 
+    "model": "south.migrationhistory", 
+    "fields": {
+        "applied": "2014-08-22T19:58:07.029Z", 
+        "app_name": "filer", 
+        "migration": "0001_initial"
+    }
+},
+{
+    "pk": 18, 
+    "model": "south.migrationhistory", 
+    "fields": {
+        "applied": "2014-08-22T19:58:07.258Z", 
+        "app_name": "filer", 
+        "migration": "0002_rename_file_field"
+    }
+},
+{
+    "pk": 19, 
+    "model": "south.migrationhistory", 
+    "fields": {
+        "applied": "2014-08-22T19:58:07.468Z", 
+        "app_name": "filer", 
+        "migration": "0003_add_description_field"
+    }
+},
+{
+    "pk": 20, 
+    "model": "south.migrationhistory", 
+    "fields": {
+        "applied": "2014-08-22T19:58:07.708Z", 
+        "app_name": "filer", 
+        "migration": "0004_auto__del_field_file__file__add_field_file_file__add_field_file_is_pub"
+    }
+},
+{
+    "pk": 21, 
+    "model": "south.migrationhistory", 
+    "fields": {
+        "applied": "2014-08-22T19:58:07.944Z", 
+        "app_name": "filer", 
+        "migration": "0005_auto__add_field_file_sha1__chg_field_file_file"
+    }
+},
+{
+    "pk": 22, 
+    "model": "south.migrationhistory", 
+    "fields": {
+        "applied": "2014-08-22T19:58:08.110Z", 
+        "app_name": "filer", 
+        "migration": "0006_polymorphic__add_field_file_polymorphic_ctype"
+    }
+},
+{
+    "pk": 23, 
+    "model": "south.migrationhistory", 
+    "fields": {
+        "applied": "2014-08-22T19:58:08.204Z", 
+        "app_name": "filer", 
+        "migration": "0007_polymorphic__content_type_data"
+    }
+},
+{
+    "pk": 24, 
+    "model": "south.migrationhistory", 
+    "fields": {
+        "applied": "2014-08-22T19:58:08.358Z", 
+        "app_name": "filer", 
+        "migration": "0008_polymorphic__del_field_file__file_type_plugin_name"
+    }
+},
+{
+    "pk": 25, 
+    "model": "south.migrationhistory", 
+    "fields": {
+        "applied": "2014-08-22T19:58:08.764Z", 
+        "app_name": "filer", 
+        "migration": "0009_auto__add_field_folderpermission_can_edit_new__add_field_folderpermiss"
+    }
+},
+{
+    "pk": 26, 
+    "model": "south.migrationhistory", 
+    "fields": {
+        "applied": "2014-08-22T19:58:08.858Z", 
+        "app_name": "filer", 
+        "migration": "0010_folderpermissions"
+    }
+},
+{
+    "pk": 27, 
+    "model": "south.migrationhistory", 
+    "fields": {
+        "applied": "2014-08-22T19:58:09.199Z", 
+        "app_name": "filer", 
+        "migration": "0011_auto__del_field_folderpermission_can_add_children__del_field_folderper"
+    }
+},
+{
+    "pk": 28, 
+    "model": "south.migrationhistory", 
+    "fields": {
+        "applied": "2014-08-22T19:58:09.576Z", 
+        "app_name": "filer", 
+        "migration": "0012_renaming_folderpermissions"
+    }
+},
+{
+    "pk": 29, 
+    "model": "south.migrationhistory", 
+    "fields": {
+        "applied": "2014-08-22T19:58:09.689Z", 
+        "app_name": "filer", 
+        "migration": "0013_remove_null_file_name"
+    }
+},
+{
+    "pk": 30, 
+    "model": "south.migrationhistory", 
+    "fields": {
+        "applied": "2014-08-22T19:58:09.912Z", 
+        "app_name": "filer", 
+        "migration": "0014_auto__add_field_image_related_url__chg_field_file_name"
+    }
+},
+{
+    "pk": 1, 
+    "model": "real_estate.owner", 
+    "fields": {
+        "comercial_phone": "", 
+        "residential_phone": "11 4411-5266", 
+        "mobile_phone": "", 
+        "name": "Benedito Aparecido Furquim / Ana", 
+        "email": ""
+    }
+},
+{
+    "pk": 2, 
+    "model": "real_estate.owner", 
+    "fields": {
+        "comercial_phone": "(19) 9 9796-2249", 
+        "residential_phone": "(19) 3807 2729", 
+        "mobile_phone": "(19) 9 9761-5203", 
+        "name": "Heitor Benedetti / Agnaldo", 
+        "email": ""
+    }
+},
+{
+    "pk": 3, 
+    "model": "real_estate.owner", 
+    "fields": {
+        "comercial_phone": "", 
+        "residential_phone": "", 
+        "mobile_phone": "(19) 9 9699-3165", 
+        "name": "Jo\u00e3o", 
+        "email": ""
+    }
+},
+{
+    "pk": 4, 
+    "model": "real_estate.owner", 
+    "fields": {
+        "comercial_phone": "", 
+        "residential_phone": "", 
+        "mobile_phone": "(19) 9 9241-9074", 
+        "name": "Toninho Vidraceiro", 
+        "email": ""
+    }
+},
+{
+    "pk": 5, 
+    "model": "real_estate.owner", 
+    "fields": {
+        "comercial_phone": "", 
+        "residential_phone": "", 
+        "mobile_phone": "(19) 9 9677-6622", 
+        "name": "Rog\u00e9rio (Colega do Michael/Cida)", 
+        "email": ""
+    }
+},
+{
+    "pk": 6, 
+    "model": "real_estate.owner", 
+    "fields": {
+        "comercial_phone": "", 
+        "residential_phone": "", 
+        "mobile_phone": "(19) 3808-3554", 
+        "name": "Ademir e Marta", 
+        "email": ""
+    }
+},
+{
+    "pk": 7, 
+    "model": "real_estate.owner", 
+    "fields": {
+        "comercial_phone": "", 
+        "residential_phone": "", 
+        "mobile_phone": "(19) 9 8122 8203", 
+        "name": "Nelson Godoy", 
+        "email": ""
+    }
+},
+{
+    "pk": 8, 
+    "model": "real_estate.owner", 
+    "fields": {
+        "comercial_phone": "", 
+        "residential_phone": "(41) 3445 1848", 
+        "mobile_phone": "(41) 9112 9661", 
+        "name": "Carlos (Gugu)", 
+        "email": ""
+    }
+},
+{
+    "pk": 9, 
+    "model": "real_estate.owner", 
+    "fields": {
+        "comercial_phone": "", 
+        "residential_phone": "(11) 3331-0158", 
+        "mobile_phone": "", 
+        "name": "Dona Vera L. Cruz", 
+        "email": "vlcruz@uol.com.br"
+    }
+},
+{
+    "pk": 10, 
+    "model": "real_estate.owner", 
+    "fields": {
+        "comercial_phone": "", 
+        "residential_phone": "", 
+        "mobile_phone": "(19) 9 9791-9938", 
+        "name": "Jos\u00e9 Gasparini (Serralheiro)", 
+        "email": ""
+    }
+},
+{
+    "pk": 11, 
+    "model": "real_estate.owner", 
+    "fields": {
+        "comercial_phone": "", 
+        "residential_phone": "(19) 3807-0523", 
+        "mobile_phone": "(19) 9 9775-0622", 
+        "name": "Patricia Guerra Gonzales", 
+        "email": ""
+    }
+},
+{
+    "pk": 12, 
+    "model": "real_estate.owner", 
+    "fields": {
+        "comercial_phone": "", 
+        "residential_phone": "", 
+        "mobile_phone": "(19) 9 9797 7276", 
+        "name": "Alexandre (Valinhos Pneus)", 
+        "email": ""
+    }
+},
+{
+    "pk": 13, 
+    "model": "real_estate.owner", 
+    "fields": {
+        "comercial_phone": "", 
+        "residential_phone": "(19) 3807-3127", 
+        "mobile_phone": "", 
+        "name": "Zanella (Bi\u00e1)", 
+        "email": ""
+    }
+},
+{
+    "pk": 14, 
+    "model": "real_estate.owner", 
+    "fields": {
+        "comercial_phone": "", 
+        "residential_phone": "", 
+        "mobile_phone": "", 
+        "name": "Tio Fl\u00e1vio Guerra", 
+        "email": ""
+    }
+},
+{
+    "pk": 15, 
+    "model": "real_estate.owner", 
+    "fields": {
+        "comercial_phone": "", 
+        "residential_phone": "", 
+        "mobile_phone": "", 
+        "name": "Tia N\u00e1dia", 
+        "email": ""
+    }
+},
+{
+    "pk": 16, 
+    "model": "real_estate.owner", 
+    "fields": {
+        "comercial_phone": "", 
+        "residential_phone": "", 
+        "mobile_phone": "", 
+        "name": "Carlos Eduardo Vido", 
+        "email": ""
+    }
+},
+{
+    "pk": 17, 
+    "model": "real_estate.owner", 
+    "fields": {
+        "comercial_phone": "(19) 9 9224-2019 Wal", 
+        "residential_phone": "(19) 3817-3072", 
+        "mobile_phone": "(19) 9 9625-0948", 
+        "name": "Du da Shefa", 
+        "email": ""
+    }
+},
+{
+    "pk": 1, 
+    "model": "real_estate.property", 
+    "fields": {
+        "category": "T", 
+        "city": "Atibaia", 
+        "wc": 0, 
+        "area": 4705, 
+        "timestamp": "2014-12-26T20:48:11.440Z", 
+        "price": 650, 
+        "is_active": true, 
+        "garage": 0, 
+        "rent": 0, 
+        "address": "Travessa Estrada dos Pereiras", 
+        "owner": 1, 
+        "neighborhood": "Ribeir\u00e3o dos Porcos", 
+        "condo": 0, 
+        "clicks": 0, 
+        "unit": "m\u00b2", 
+        "rooms": 0
+    }
+},
+{
+    "pk": 2, 
+    "model": "real_estate.property", 
+    "fields": {
+        "category": "T", 
+        "city": "Amparo", 
+        "wc": 0, 
+        "area": 360, 
+        "timestamp": "2014-12-26T20:54:56.855Z", 
+        "price": 250, 
+        "is_active": true, 
+        "garage": 0, 
+        "rent": 0, 
+        "address": "Rua Carlos Augusto do Amaral Sobrinho", 
+        "owner": 2, 
+        "neighborhood": "Jardim S\u00e3o Roberto", 
+        "condo": 0, 
+        "clicks": 0, 
+        "unit": "m\u00b2", 
+        "rooms": 0
+    }
+},
+{
+    "pk": 3, 
+    "model": "real_estate.property", 
+    "fields": {
+        "category": "A", 
+        "city": "Amparo", 
+        "wc": 1, 
+        "area": 57, 
+        "timestamp": "2014-12-26T21:01:21.507Z", 
+        "price": 190, 
+        "is_active": true, 
+        "garage": 1, 
+        "rent": 0, 
+        "address": "Avenida Airton Senna", 
+        "owner": 3, 
+        "neighborhood": "Residencial Parque das Flores", 
+        "condo": 250, 
+        "clicks": 0, 
+        "unit": "m\u00b2", 
+        "rooms": 2
+    }
+},
+{
+    "pk": 4, 
+    "model": "real_estate.property", 
+    "fields": {
+        "category": "X", 
+        "city": "Amparo", 
+        "wc": 2, 
+        "area": 1286, 
+        "timestamp": "2014-12-26T21:06:13.833Z", 
+        "price": 350, 
+        "is_active": true, 
+        "garage": 2, 
+        "rent": 0, 
+        "address": "Rua Elenir B. Orlandi, 71", 
+        "owner": 4, 
+        "neighborhood": "Est\u00e2ncia, Tr\u00eas Pontes", 
+        "condo": 0, 
+        "clicks": 0, 
+        "unit": "m\u00b2", 
+        "rooms": 3
+    }
+},
+{
+    "pk": 5, 
+    "model": "real_estate.property", 
+    "fields": {
+        "category": "T", 
+        "city": "Amparo", 
+        "wc": 0, 
+        "area": 1680, 
+        "timestamp": "2014-12-26T21:08:13.953Z", 
+        "price": 140, 
+        "is_active": true, 
+        "garage": 0, 
+        "rent": 0, 
+        "address": "Rua Elenir B. Orlandi, 71", 
+        "owner": 4, 
+        "neighborhood": "Est\u00e2ncia, Tr\u00eas Pontes", 
+        "condo": 0, 
+        "clicks": 0, 
+        "unit": "m\u00b2", 
+        "rooms": 0
+    }
+},
+{
+    "pk": 6, 
+    "model": "real_estate.property", 
+    "fields": {
+        "category": "H", 
+        "city": "Amparo", 
+        "wc": 1, 
+        "area": 70, 
+        "timestamp": "2014-12-26T21:11:09.609Z", 
+        "price": 250, 
+        "is_active": true, 
+        "garage": 2, 
+        "rent": 0, 
+        "address": "Rua Tangar\u00e1, 186", 
+        "owner": 5, 
+        "neighborhood": "Jardim das Aves", 
+        "condo": 0, 
+        "clicks": 0, 
+        "unit": "m\u00b2", 
+        "rooms": 2
+    }
+},
+{
+    "pk": 7, 
+    "model": "real_estate.property", 
+    "fields": {
+        "category": "S", 
+        "city": "Amparo", 
+        "wc": 0, 
+        "area": 72000, 
+        "timestamp": "2014-12-26T21:14:42.322Z", 
+        "price": 660, 
+        "is_active": true, 
+        "garage": 0, 
+        "rent": 0, 
+        "address": "Estrada Amparo Morungaba", 
+        "owner": 6, 
+        "neighborhood": "Bairro dos Rosas", 
+        "condo": 0, 
+        "clicks": 0, 
+        "unit": "m\u00b2", 
+        "rooms": 0
+    }
+},
+{
+    "pk": 8, 
+    "model": "real_estate.property", 
+    "fields": {
+        "category": "T", 
+        "city": "Amparo", 
+        "wc": 0, 
+        "area": 81500, 
+        "timestamp": "2014-12-26T21:17:55.603Z", 
+        "price": 3260, 
+        "is_active": true, 
+        "garage": 0, 
+        "rent": 0, 
+        "address": "Estrada Amparo Pedreira", 
+        "owner": 7, 
+        "neighborhood": "Bairro do Mart\u00edrio", 
+        "condo": 0, 
+        "clicks": 0, 
+        "unit": "m\u00b2", 
+        "rooms": 0
+    }
+},
+{
+    "pk": 9, 
+    "model": "real_estate.property", 
+    "fields": {
+        "category": "X", 
+        "city": "Amparo", 
+        "wc": 2, 
+        "area": 150, 
+        "timestamp": "2014-12-26T21:25:12.853Z", 
+        "price": 450, 
+        "is_active": true, 
+        "garage": 2, 
+        "rent": 0, 
+        "address": "Rua Santa B\u00e1rbara D'Oeste", 
+        "owner": 8, 
+        "neighborhood": "Jardim Flamboyant", 
+        "condo": 0, 
+        "clicks": 0, 
+        "unit": "m\u00b2", 
+        "rooms": 3
+    }
+},
+{
+    "pk": 10, 
+    "model": "real_estate.property", 
+    "fields": {
+        "category": "A", 
+        "city": "S\u00e3o Paulo", 
+        "wc": 1, 
+        "area": 50, 
+        "timestamp": "2014-12-26T21:28:46.277Z", 
+        "price": 350, 
+        "is_active": true, 
+        "garage": 0, 
+        "rent": 0, 
+        "address": "Alameda Glete", 
+        "owner": 9, 
+        "neighborhood": "Santa Cec\u00edlia", 
+        "condo": 0, 
+        "clicks": 0, 
+        "unit": "m\u00b2", 
+        "rooms": 2
+    }
+},
+{
+    "pk": 11, 
+    "model": "real_estate.property", 
+    "fields": {
+        "category": "X", 
+        "city": "Monte Alegre do Sul", 
+        "wc": 5, 
+        "area": 3000, 
+        "timestamp": "2014-12-26T21:34:44.448Z", 
+        "price": 550, 
+        "is_active": true, 
+        "garage": 2, 
+        "rent": 0, 
+        "address": "Bairro da Ponte Preta", 
+        "owner": 10, 
+        "neighborhood": "Bairro da Ponte Preta", 
+        "condo": 0, 
+        "clicks": 0, 
+        "unit": "m\u00b2", 
+        "rooms": 4
+    }
+},
+{
+    "pk": 12, 
+    "model": "real_estate.property", 
+    "fields": {
+        "category": "X", 
+        "city": "Amparo", 
+        "wc": 2, 
+        "area": 1500, 
+        "timestamp": "2014-12-26T21:39:26.854Z", 
+        "price": 500, 
+        "is_active": true, 
+        "garage": 2, 
+        "rent": 0, 
+        "address": "Est\u00e2ncia, Tr\u00eas Pontes", 
+        "owner": 11, 
+        "neighborhood": "Est\u00e2ncia, Tr\u00eas Pontes", 
+        "condo": 0, 
+        "clicks": 0, 
+        "unit": "m\u00b2", 
+        "rooms": 3
+    }
+},
+{
+    "pk": 13, 
+    "model": "real_estate.property", 
+    "fields": {
+        "category": "T", 
+        "city": "Amparo", 
+        "wc": 0, 
+        "area": 300, 
+        "timestamp": "2014-12-26T21:46:04.288Z", 
+        "price": 100, 
+        "is_active": true, 
+        "garage": 0, 
+        "rent": 0, 
+        "address": "Terras de Monte Alegre", 
+        "owner": 12, 
+        "neighborhood": "Terras de Monte Alegre", 
+        "condo": 0, 
+        "clicks": 0, 
+        "unit": "m\u00b2", 
+        "rooms": 0
+    }
+},
+{
+    "pk": 14, 
+    "model": "real_estate.property", 
+    "fields": {
+        "category": "T", 
+        "city": "Amparo", 
+        "wc": 0, 
+        "area": 600, 
+        "timestamp": "2014-12-26T21:48:38.266Z", 
+        "price": 420, 
+        "is_active": true, 
+        "garage": 0, 
+        "rent": 0, 
+        "address": "Rua Alcides Barassa", 
+        "owner": 13, 
+        "neighborhood": "Parque Real", 
+        "condo": 0, 
+        "clicks": 0, 
+        "unit": "m\u00b2", 
+        "rooms": 0
+    }
+},
+{
+    "pk": 15, 
+    "model": "real_estate.property", 
+    "fields": {
+        "category": "H", 
+        "city": "Campos do Jord\u00e3o", 
+        "wc": 4, 
+        "area": 1200, 
+        "timestamp": "2014-12-26T21:54:36.511Z", 
+        "price": 800, 
+        "is_active": true, 
+        "garage": 4, 
+        "rent": 0, 
+        "address": "Condom\u00ednio V\u00e9u da Noiva", 
+        "owner": 14, 
+        "neighborhood": "Condom\u00ednio V\u00e9u da Noiva, Capivari", 
+        "condo": 350, 
+        "clicks": 0, 
+        "unit": "m\u00b2", 
+        "rooms": 6
+    }
+},
+{
+    "pk": 16, 
+    "model": "real_estate.property", 
+    "fields": {
+        "category": "H", 
+        "city": "Louveira", 
+        "wc": 3, 
+        "area": 1200, 
+        "timestamp": "2014-12-26T22:07:39.782Z", 
+        "price": 650, 
+        "is_active": true, 
+        "garage": 2, 
+        "rent": 0, 
+        "address": "Residencial Picollo Villaggio", 
+        "owner": 15, 
+        "neighborhood": "Residencial Picollo Villaggio", 
+        "condo": 350, 
+        "clicks": 0, 
+        "unit": "m\u00b2", 
+        "rooms": 3
+    }
+},
+{
+    "pk": 17, 
+    "model": "real_estate.property", 
+    "fields": {
+        "category": "H", 
+        "city": "Amparo", 
+        "wc": 4, 
+        "area": 270, 
+        "timestamp": "2014-12-26T22:09:57.752Z", 
+        "price": 850, 
+        "is_active": true, 
+        "garage": 4, 
+        "rent": 3500, 
+        "address": "Raul de Souza Leite, 26", 
+        "owner": 16, 
+        "neighborhood": "S\u00e3o Sebasti\u00e3o", 
+        "condo": 0, 
+        "clicks": 0, 
+        "unit": "m\u00b2", 
+        "rooms": 3
+    }
+},
+{
+    "pk": 18, 
+    "model": "real_estate.property", 
+    "fields": {
+        "category": "H", 
+        "city": "Amparo", 
+        "wc": 3, 
+        "area": 275, 
+        "timestamp": "2014-12-26T22:14:31.025Z", 
+        "price": 800, 
+        "is_active": true, 
+        "garage": 2, 
+        "rent": 3500, 
+        "address": "Rua Manuel de Mattos Azevedo, 136", 
+        "owner": 16, 
+        "neighborhood": "Jardim Bela Vista", 
+        "condo": 0, 
+        "clicks": 0, 
+        "unit": "m\u00b2", 
+        "rooms": 5
+    }
+},
+{
+    "pk": 19, 
+    "model": "real_estate.property", 
+    "fields": {
+        "category": "T", 
+        "city": "Monte Alegre do Sul", 
+        "wc": 0, 
+        "area": 450, 
+        "timestamp": "2014-12-26T22:21:06.829Z", 
+        "price": 100, 
+        "is_active": true, 
+        "garage": 0, 
+        "rent": 0, 
+        "address": "Rua 03, Quadra B - Lote 13", 
+        "owner": 17, 
+        "neighborhood": "Morada do Sol Nascente, Mostardas", 
+        "condo": 0, 
+        "clicks": 0, 
+        "unit": "m\u00b2", 
+        "rooms": 0
+    }
+},
+{
+    "pk": 20, 
+    "model": "real_estate.property", 
+    "fields": {
+        "category": "A", 
+        "city": "Cuiab\u00e1", 
+        "wc": 2, 
+        "area": 71, 
+        "timestamp": "2014-12-26T22:32:29.264Z", 
+        "price": 320, 
+        "is_active": true, 
+        "garage": 1, 
+        "rent": 1500, 
+        "address": "Av. Santo Ant\u00f4nio, 250, Bloco B, apto: 3", 
+        "owner": 16, 
+        "neighborhood": "Jd. das Palmeiras", 
+        "condo": 310, 
+        "clicks": 0, 
+        "unit": "m\u00b2", 
+        "rooms": 2
+    }
+},
+{
+    "pk": 1, 
+    "model": "filter.filterkind", 
+    "fields": {
+        "list_template": "f_generic_list.html", 
+        "form_template": "f_no_form.html", 
+        "title": "Sel. Categoria"
+    }
+},
+{
+    "pk": 2, 
+    "model": "filter.filterkind", 
+    "fields": {
+        "list_template": "f_generic_list.html", 
+        "form_template": "f_ap_form.html", 
+        "title": "Casas"
+    }
+},
+{
+    "pk": 3, 
+    "model": "filter.filterkind", 
+    "fields": {
+        "list_template": "f_generic_list.html", 
+        "form_template": "f_ap_form.html", 
+        "title": "Apartamentos"
+    }
+},
+{
+    "pk": 4, 
+    "model": "filter.filterkind", 
+    "fields": {
+        "list_template": "f_generic_list.html", 
+        "form_template": "f_ap_form.html", 
+        "title": "Casa ou Apartamentos"
+    }
+},
+{
+    "pk": 5, 
+    "model": "filter.filterkind", 
+    "fields": {
+        "list_template": "f_generic_list.html", 
+        "form_template": "f_ll_form.html", 
+        "title": "Terrenos"
+    }
+},
+{
+    "pk": 1, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_logentry", 
+        "name": "Can add log entry", 
+        "content_type": 1
+    }
+},
+{
+    "pk": 2, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_logentry", 
+        "name": "Can change log entry", 
+        "content_type": 1
+    }
+},
+{
+    "pk": 3, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_logentry", 
+        "name": "Can delete log entry", 
+        "content_type": 1
+    }
+},
+{
+    "pk": 4, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_permission", 
+        "name": "Can add permission", 
+        "content_type": 2
+    }
+},
+{
+    "pk": 5, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_permission", 
+        "name": "Can change permission", 
+        "content_type": 2
+    }
+},
+{
+    "pk": 6, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_permission", 
+        "name": "Can delete permission", 
+        "content_type": 2
+    }
+},
+{
+    "pk": 7, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_group", 
+        "name": "Can add group", 
+        "content_type": 3
+    }
+},
+{
+    "pk": 8, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_group", 
+        "name": "Can change group", 
+        "content_type": 3
+    }
+},
+{
+    "pk": 9, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_group", 
+        "name": "Can delete group", 
+        "content_type": 3
+    }
+},
+{
+    "pk": 10, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_user", 
+        "name": "Can add user", 
+        "content_type": 4
+    }
+},
+{
+    "pk": 11, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_user", 
+        "name": "Can change user", 
+        "content_type": 4
+    }
+},
+{
+    "pk": 12, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_user", 
+        "name": "Can delete user", 
+        "content_type": 4
+    }
+},
+{
+    "pk": 13, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_contenttype", 
+        "name": "Can add content type", 
+        "content_type": 5
+    }
+},
+{
+    "pk": 14, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_contenttype", 
+        "name": "Can change content type", 
+        "content_type": 5
+    }
+},
+{
+    "pk": 15, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_contenttype", 
+        "name": "Can delete content type", 
+        "content_type": 5
+    }
+},
+{
+    "pk": 16, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_session", 
+        "name": "Can add session", 
+        "content_type": 6
+    }
+},
+{
+    "pk": 17, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_session", 
+        "name": "Can change session", 
+        "content_type": 6
+    }
+},
+{
+    "pk": 18, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_session", 
+        "name": "Can delete session", 
+        "content_type": 6
+    }
+},
+{
+    "pk": 19, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_site", 
+        "name": "Can add site", 
+        "content_type": 7
+    }
+},
+{
+    "pk": 20, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_site", 
+        "name": "Can change site", 
+        "content_type": 7
+    }
+},
+{
+    "pk": 21, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_site", 
+        "name": "Can delete site", 
+        "content_type": 7
+    }
+},
+{
+    "pk": 22, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_migrationhistory", 
+        "name": "Can add migration history", 
+        "content_type": 8
+    }
+},
+{
+    "pk": 23, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_migrationhistory", 
+        "name": "Can change migration history", 
+        "content_type": 8
+    }
+},
+{
+    "pk": 24, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_migrationhistory", 
+        "name": "Can delete migration history", 
+        "content_type": 8
+    }
+},
+{
+    "pk": 25, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_subscriber", 
+        "name": "Can add subscriber", 
+        "content_type": 9
+    }
+},
+{
+    "pk": 26, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_subscriber", 
+        "name": "Can change subscriber", 
+        "content_type": 9
+    }
+},
+{
+    "pk": 27, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_subscriber", 
+        "name": "Can delete subscriber", 
+        "content_type": 9
+    }
+},
+{
+    "pk": 28, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_owner", 
+        "name": "Can add owner", 
+        "content_type": 10
+    }
+},
+{
+    "pk": 29, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_owner", 
+        "name": "Can change owner", 
+        "content_type": 10
+    }
+},
+{
+    "pk": 30, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_owner", 
+        "name": "Can delete owner", 
+        "content_type": 10
+    }
+},
+{
+    "pk": 31, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_property", 
+        "name": "Can add property", 
+        "content_type": 11
+    }
+},
+{
+    "pk": 32, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_property", 
+        "name": "Can change property", 
+        "content_type": 11
+    }
+},
+{
+    "pk": 33, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_property", 
+        "name": "Can delete property", 
+        "content_type": 11
+    }
+},
+{
+    "pk": 34, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_photo", 
+        "name": "Can add photo", 
+        "content_type": 12
+    }
+},
+{
+    "pk": 35, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_photo", 
+        "name": "Can change photo", 
+        "content_type": 12
+    }
+},
+{
+    "pk": 36, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_photo", 
+        "name": "Can delete photo", 
+        "content_type": 12
+    }
+},
+{
+    "pk": 37, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_filterkind", 
+        "name": "Can add filter kind", 
+        "content_type": 13
+    }
+},
+{
+    "pk": 38, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_filterkind", 
+        "name": "Can change filter kind", 
+        "content_type": 13
+    }
+},
+{
+    "pk": 39, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_filterkind", 
+        "name": "Can delete filter kind", 
+        "content_type": 13
+    }
+},
+{
+    "pk": 40, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_source", 
+        "name": "Can add source", 
+        "content_type": 14
+    }
+},
+{
+    "pk": 41, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_source", 
+        "name": "Can change source", 
+        "content_type": 14
+    }
+},
+{
+    "pk": 42, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_source", 
+        "name": "Can delete source", 
+        "content_type": 14
+    }
+},
+{
+    "pk": 43, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_thumbnail", 
+        "name": "Can add thumbnail", 
+        "content_type": 15
+    }
+},
+{
+    "pk": 44, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_thumbnail", 
+        "name": "Can change thumbnail", 
+        "content_type": 15
+    }
+},
+{
+    "pk": 45, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_thumbnail", 
+        "name": "Can delete thumbnail", 
+        "content_type": 15
+    }
+},
+{
+    "pk": 46, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_thumbnaildimensions", 
+        "name": "Can add thumbnail dimensions", 
+        "content_type": 16
+    }
+},
+{
+    "pk": 47, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_thumbnaildimensions", 
+        "name": "Can change thumbnail dimensions", 
+        "content_type": 16
+    }
+},
+{
+    "pk": 48, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_thumbnaildimensions", 
+        "name": "Can delete thumbnail dimensions", 
+        "content_type": 16
+    }
+},
+{
+    "pk": 49, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_folder", 
+        "name": "Can add Folder", 
+        "content_type": 17
+    }
+},
+{
+    "pk": 50, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_folder", 
+        "name": "Can change Folder", 
+        "content_type": 17
+    }
+},
+{
+    "pk": 51, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_folder", 
+        "name": "Can delete Folder", 
+        "content_type": 17
+    }
+},
+{
+    "pk": 52, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "can_use_directory_listing", 
+        "name": "Can use directory listing", 
+        "content_type": 17
+    }
+},
+{
+    "pk": 53, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_folderpermission", 
+        "name": "Can add folder permission", 
+        "content_type": 18
+    }
+},
+{
+    "pk": 54, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_folderpermission", 
+        "name": "Can change folder permission", 
+        "content_type": 18
+    }
+},
+{
+    "pk": 55, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_folderpermission", 
+        "name": "Can delete folder permission", 
+        "content_type": 18
+    }
+},
+{
+    "pk": 56, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_file", 
+        "name": "Can add file", 
+        "content_type": 19
+    }
+},
+{
+    "pk": 57, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_file", 
+        "name": "Can change file", 
+        "content_type": 19
+    }
+},
+{
+    "pk": 58, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_file", 
+        "name": "Can delete file", 
+        "content_type": 19
+    }
+},
+{
+    "pk": 59, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_clipboard", 
+        "name": "Can add clipboard", 
+        "content_type": 20
+    }
+},
+{
+    "pk": 60, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_clipboard", 
+        "name": "Can change clipboard", 
+        "content_type": 20
+    }
+},
+{
+    "pk": 61, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_clipboard", 
+        "name": "Can delete clipboard", 
+        "content_type": 20
+    }
+},
+{
+    "pk": 62, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_clipboarditem", 
+        "name": "Can add clipboard item", 
+        "content_type": 21
+    }
+},
+{
+    "pk": 63, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_clipboarditem", 
+        "name": "Can change clipboard item", 
+        "content_type": 21
+    }
+},
+{
+    "pk": 64, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_clipboarditem", 
+        "name": "Can delete clipboard item", 
+        "content_type": 21
+    }
+},
+{
+    "pk": 65, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_image", 
+        "name": "Can add image", 
+        "content_type": 22
+    }
+},
+{
+    "pk": 66, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_image", 
+        "name": "Can change image", 
+        "content_type": 22
+    }
+},
+{
+    "pk": 67, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_image", 
+        "name": "Can delete image", 
+        "content_type": 22
+    }
+},
+{
+    "pk": 1, 
+    "model": "auth.user", 
+    "fields": {
+        "username": "cevido", 
+        "first_name": "", 
+        "last_name": "", 
+        "is_active": true, 
+        "is_superuser": true, 
+        "is_staff": true, 
+        "last_login": "2014-12-26T23:11:39.709Z", 
+        "groups": [], 
+        "user_permissions": [], 
+        "password": "pbkdf2_sha256$12000$YCBnb2V08jbo$vqNTP6FkRVoTZb1elkK07/o20vsGIVCbqoPPkX3yql0=", 
+        "email": "vido@usp.br", 
+        "date_joined": "2014-08-04T01:52:53.396Z"
+    }
+},
+{
+    "pk": 1, 
+    "model": "filer.clipboard", 
+    "fields": {
+        "user": 1
+    }
+},
+{
+    "pk": 1, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 1, 
+        "action_time": "2014-12-26T20:46:28.112Z", 
+        "object_repr": "Benedito Aparecido Furquim", 
+        "object_id": "1", 
+        "change_message": "", 
+        "user": 1, 
+        "content_type": 10
+    }
+},
+{
+    "pk": 2, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 1, 
+        "action_time": "2014-12-26T20:48:11.445Z", 
+        "object_repr": "Terreno Travessa Estrada dos Pere", 
+        "object_id": "1", 
+        "change_message": "", 
+        "user": 1, 
+        "content_type": 11
+    }
+},
+{
+    "pk": 3, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 2, 
+        "action_time": "2014-12-26T20:48:27.667Z", 
+        "object_repr": "Terreno Travessa Estrada dos Pere", 
+        "object_id": "1", 
+        "change_message": "No fields changed.", 
+        "user": 1, 
+        "content_type": 11
+    }
+},
+{
+    "pk": 4, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 2, 
+        "action_time": "2014-12-26T20:49:48.520Z", 
+        "object_repr": "Benedito Aparecido Furquim / Ana (TelRs: 11 4411-5266)", 
+        "object_id": "1", 
+        "change_message": "Changed name and residential_phone.", 
+        "user": 1, 
+        "content_type": 10
+    }
+},
+{
+    "pk": 5, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 1, 
+        "action_time": "2014-12-26T20:54:02.089Z", 
+        "object_repr": "Heitor Benedetti (Cel: (19) 9 9761-5203)", 
+        "object_id": "2", 
+        "change_message": "", 
+        "user": 1, 
+        "content_type": 10
+    }
+},
+{
+    "pk": 6, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 1, 
+        "action_time": "2014-12-26T20:54:56.860Z", 
+        "object_repr": "Terreno Rua Carlos Augusto do Ama", 
+        "object_id": "2", 
+        "change_message": "", 
+        "user": 1, 
+        "content_type": 11
+    }
+},
+{
+    "pk": 7, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 2, 
+        "action_time": "2014-12-26T20:56:57.866Z", 
+        "object_repr": "Heitor Benedetti / Agnaldo (Cel: (19) 9 9761-5203)", 
+        "object_id": "2", 
+        "change_message": "Changed name, comercial_phone and residential_phone.", 
+        "user": 1, 
+        "content_type": 10
+    }
+},
+{
+    "pk": 8, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 1, 
+        "action_time": "2014-12-26T20:59:47.101Z", 
+        "object_repr": "Jo\u00e3o (Cel: (19) 9 9699-3165)", 
+        "object_id": "3", 
+        "change_message": "", 
+        "user": 1, 
+        "content_type": 10
+    }
+},
+{
+    "pk": 9, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 1, 
+        "action_time": "2014-12-26T21:01:21.512Z", 
+        "object_repr": "Apartamento Avenida Airton Senna", 
+        "object_id": "3", 
+        "change_message": "", 
+        "user": 1, 
+        "content_type": 11
+    }
+},
+{
+    "pk": 10, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 1, 
+        "action_time": "2014-12-26T21:04:00.196Z", 
+        "object_repr": "Toninho Vidraceiro (Cel: (19) 9 9241-9074)", 
+        "object_id": "4", 
+        "change_message": "", 
+        "user": 1, 
+        "content_type": 10
+    }
+},
+{
+    "pk": 11, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 1, 
+        "action_time": "2014-12-26T21:06:13.839Z", 
+        "object_repr": "Chacara Rua Elenir B. Orlandi, 71", 
+        "object_id": "4", 
+        "change_message": "", 
+        "user": 1, 
+        "content_type": 11
+    }
+},
+{
+    "pk": 12, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 1, 
+        "action_time": "2014-12-26T21:08:13.957Z", 
+        "object_repr": "Terreno Rua Elenir B. Orlandi, 71", 
+        "object_id": "5", 
+        "change_message": "", 
+        "user": 1, 
+        "content_type": 11
+    }
+},
+{
+    "pk": 13, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 1, 
+        "action_time": "2014-12-26T21:09:06.952Z", 
+        "object_repr": "Rog\u00e9rio (Cel: (19) 9 9677-6622)", 
+        "object_id": "5", 
+        "change_message": "", 
+        "user": 1, 
+        "content_type": 10
+    }
+},
+{
+    "pk": 14, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 2, 
+        "action_time": "2014-12-26T21:09:57.972Z", 
+        "object_repr": "Rog\u00e9rio (Colega do Michael/Cida) (Cel: (19) 9 9677-6622)", 
+        "object_id": "5", 
+        "change_message": "Changed name.", 
+        "user": 1, 
+        "content_type": 10
+    }
+},
+{
+    "pk": 15, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 1, 
+        "action_time": "2014-12-26T21:11:09.612Z", 
+        "object_repr": "Casa Rua Tangar\u00e1, 186", 
+        "object_id": "6", 
+        "change_message": "", 
+        "user": 1, 
+        "content_type": 11
+    }
+},
+{
+    "pk": 16, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 1, 
+        "action_time": "2014-12-26T21:13:06.392Z", 
+        "object_repr": "Ademir e Marta (Cel: (19) 3808-3554)", 
+        "object_id": "6", 
+        "change_message": "", 
+        "user": 1, 
+        "content_type": 10
+    }
+},
+{
+    "pk": 17, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 1, 
+        "action_time": "2014-12-26T21:14:42.327Z", 
+        "object_repr": "Sitio Estrada Amparo Morungaba", 
+        "object_id": "7", 
+        "change_message": "", 
+        "user": 1, 
+        "content_type": 11
+    }
+},
+{
+    "pk": 18, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 1, 
+        "action_time": "2014-12-26T21:15:11.503Z", 
+        "object_repr": "Nelson Godoy", 
+        "object_id": "7", 
+        "change_message": "", 
+        "user": 1, 
+        "content_type": 10
+    }
+},
+{
+    "pk": 19, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 2, 
+        "action_time": "2014-12-26T21:15:41.940Z", 
+        "object_repr": "Nelson Godoy (Cel: (19) 9 8122 8203)", 
+        "object_id": "7", 
+        "change_message": "Changed mobile_phone.", 
+        "user": 1, 
+        "content_type": 10
+    }
+},
+{
+    "pk": 20, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 1, 
+        "action_time": "2014-12-26T21:17:55.606Z", 
+        "object_repr": "Terreno Bairro do Mart\u00edrio", 
+        "object_id": "8", 
+        "change_message": "", 
+        "user": 1, 
+        "content_type": 11
+    }
+},
+{
+    "pk": 21, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 2, 
+        "action_time": "2014-12-26T21:18:23.656Z", 
+        "object_repr": "Terreno Estrada Amparo Pedreira", 
+        "object_id": "8", 
+        "change_message": "Changed address.", 
+        "user": 1, 
+        "content_type": 11
+    }
+},
+{
+    "pk": 22, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 1, 
+        "action_time": "2014-12-26T21:19:34.707Z", 
+        "object_repr": "Carlos (Gugu) (Cel: (41) 9112 9661)", 
+        "object_id": "8", 
+        "change_message": "", 
+        "user": 1, 
+        "content_type": 10
+    }
+},
+{
+    "pk": 23, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 1, 
+        "action_time": "2014-12-26T21:25:12.857Z", 
+        "object_repr": "Chacara Rua Santa B\u00e1rbara D'Oeste", 
+        "object_id": "9", 
+        "change_message": "", 
+        "user": 1, 
+        "content_type": 11
+    }
+},
+{
+    "pk": 24, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 1, 
+        "action_time": "2014-12-26T21:26:44.323Z", 
+        "object_repr": "Dona Vera L. Cruz (TelRs: (11) 3331-0158)", 
+        "object_id": "9", 
+        "change_message": "", 
+        "user": 1, 
+        "content_type": 10
+    }
+},
+{
+    "pk": 25, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 1, 
+        "action_time": "2014-12-26T21:28:46.281Z", 
+        "object_repr": "Apartamento Alameda Glete", 
+        "object_id": "10", 
+        "change_message": "", 
+        "user": 1, 
+        "content_type": 11
+    }
+},
+{
+    "pk": 26, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 1, 
+        "action_time": "2014-12-26T21:30:56.074Z", 
+        "object_repr": "Jos\u00e9 Gasparini (Serralheiro) (Cel: (19) 9 9791-9938)", 
+        "object_id": "10", 
+        "change_message": "", 
+        "user": 1, 
+        "content_type": 10
+    }
+},
+{
+    "pk": 27, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 1, 
+        "action_time": "2014-12-26T21:34:44.451Z", 
+        "object_repr": "Chacara Bairro da Ponte Preta", 
+        "object_id": "11", 
+        "change_message": "", 
+        "user": 1, 
+        "content_type": 11
+    }
+},
+{
+    "pk": 28, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 1, 
+        "action_time": "2014-12-26T21:36:03.232Z", 
+        "object_repr": "Patricia Guerra Gonzales (Cel: (19) 9 9775-0622)", 
+        "object_id": "11", 
+        "change_message": "", 
+        "user": 1, 
+        "content_type": 10
+    }
+},
+{
+    "pk": 29, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 2, 
+        "action_time": "2014-12-26T21:36:32.452Z", 
+        "object_repr": "Patricia Guerra Gonzales (Cel: (19) 9 9775-0622)", 
+        "object_id": "11", 
+        "change_message": "Changed residential_phone.", 
+        "user": 1, 
+        "content_type": 10
+    }
+},
+{
+    "pk": 30, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 1, 
+        "action_time": "2014-12-26T21:39:26.857Z", 
+        "object_repr": "Chacara Est\u00e2ncia, Tr\u00eas Pontes", 
+        "object_id": "12", 
+        "change_message": "", 
+        "user": 1, 
+        "content_type": 11
+    }
+},
+{
+    "pk": 31, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 1, 
+        "action_time": "2014-12-26T21:40:33.220Z", 
+        "object_repr": "Alexandre (Valinhos Pneus) (Cel: (19) 9 9797 7276)", 
+        "object_id": "12", 
+        "change_message": "", 
+        "user": 1, 
+        "content_type": 10
+    }
+},
+{
+    "pk": 32, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 1, 
+        "action_time": "2014-12-26T21:46:04.293Z", 
+        "object_repr": "Terreno Terras de Monte Alegre", 
+        "object_id": "13", 
+        "change_message": "", 
+        "user": 1, 
+        "content_type": 11
+    }
+},
+{
+    "pk": 33, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 1, 
+        "action_time": "2014-12-26T21:47:03.723Z", 
+        "object_repr": "Zanella (Bi\u00e1) (TelRs: (19) 3807-3127)", 
+        "object_id": "13", 
+        "change_message": "", 
+        "user": 1, 
+        "content_type": 10
+    }
+},
+{
+    "pk": 34, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 1, 
+        "action_time": "2014-12-26T21:48:38.269Z", 
+        "object_repr": "Terreno Rua Alcides Barassa", 
+        "object_id": "14", 
+        "change_message": "", 
+        "user": 1, 
+        "content_type": 11
+    }
+},
+{
+    "pk": 35, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 1, 
+        "action_time": "2014-12-26T21:52:44.383Z", 
+        "object_repr": "Tio Fl\u00e1vio Guerra", 
+        "object_id": "14", 
+        "change_message": "", 
+        "user": 1, 
+        "content_type": 10
+    }
+},
+{
+    "pk": 36, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 1, 
+        "action_time": "2014-12-26T21:54:36.515Z", 
+        "object_repr": "Casa Condom\u00ednio V\u00e9u da Noiva", 
+        "object_id": "15", 
+        "change_message": "", 
+        "user": 1, 
+        "content_type": 11
+    }
+},
+{
+    "pk": 37, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 1, 
+        "action_time": "2014-12-26T21:55:34.799Z", 
+        "object_repr": "Tia N\u00e1dia", 
+        "object_id": "15", 
+        "change_message": "", 
+        "user": 1, 
+        "content_type": 10
+    }
+},
+{
+    "pk": 38, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 1, 
+        "action_time": "2014-12-26T22:07:39.787Z", 
+        "object_repr": "Casa Residencial Picollo Villa", 
+        "object_id": "16", 
+        "change_message": "", 
+        "user": 1, 
+        "content_type": 11
+    }
+},
+{
+    "pk": 39, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 1, 
+        "action_time": "2014-12-26T22:08:10.629Z", 
+        "object_repr": "Carlos Eduardo Vido", 
+        "object_id": "16", 
+        "change_message": "", 
+        "user": 1, 
+        "content_type": 10
+    }
+},
+{
+    "pk": 40, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 1, 
+        "action_time": "2014-12-26T22:09:57.756Z", 
+        "object_repr": "Casa Raul de Souza Leite, 26", 
+        "object_id": "17", 
+        "change_message": "", 
+        "user": 1, 
+        "content_type": 11
+    }
+},
+{
+    "pk": 41, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 1, 
+        "action_time": "2014-12-26T22:14:31.029Z", 
+        "object_repr": "Casa Rua Manuel de Mattos Azev", 
+        "object_id": "18", 
+        "change_message": "", 
+        "user": 1, 
+        "content_type": 11
+    }
+},
+{
+    "pk": 42, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 1, 
+        "action_time": "2014-12-26T22:16:15.573Z", 
+        "object_repr": "Du da Shefa (Cel: (19) 9 9625-0948)", 
+        "object_id": "17", 
+        "change_message": "", 
+        "user": 1, 
+        "content_type": 10
+    }
+},
+{
+    "pk": 43, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 2, 
+        "action_time": "2014-12-26T22:17:20.439Z", 
+        "object_repr": "Du da Shefa (Cel: (19) 9 9625-0948)", 
+        "object_id": "17", 
+        "change_message": "Changed comercial_phone.", 
+        "user": 1, 
+        "content_type": 10
+    }
+},
+{
+    "pk": 44, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 2, 
+        "action_time": "2014-12-26T22:17:55.409Z", 
+        "object_repr": "Du da Shefa (Cel: (19) 9 9625-0948)", 
+        "object_id": "17", 
+        "change_message": "Changed residential_phone.", 
+        "user": 1, 
+        "content_type": 10
+    }
+},
+{
+    "pk": 45, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 1, 
+        "action_time": "2014-12-26T22:21:06.833Z", 
+        "object_repr": "Terreno Rua 03, Quadra B - Lote 1", 
+        "object_id": "19", 
+        "change_message": "", 
+        "user": 1, 
+        "content_type": 11
+    }
+},
+{
+    "pk": 46, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 1, 
+        "action_time": "2014-12-26T22:32:29.267Z", 
+        "object_repr": "Apartamento Av. Sto. Antonio,250,bloc", 
+        "object_id": "20", 
+        "change_message": "", 
+        "user": 1, 
+        "content_type": 11
+    }
+},
+{
+    "pk": 47, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 2, 
+        "action_time": "2014-12-26T23:13:36.922Z", 
+        "object_repr": "Apartamento Av. Santo Ant\u00f4nio, 250, B", 
+        "object_id": "20", 
+        "change_message": "Changed address and city.", 
+        "user": 1, 
+        "content_type": 11
+    }
+}
+]
