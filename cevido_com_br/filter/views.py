@@ -5,6 +5,7 @@ import random
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.http import Http404
+from filer.models import Image
 
 from real_estate.models import Property
 from real_estate.models import Photo
@@ -33,6 +34,12 @@ def monkey_patch_thumbnails(property_list):
         photo_list = Photo.objects.filter(fk_property=p)
         if photo_list:
             p.thumbnail = photo_list[0].thumbnail.url
+        else:
+            # gets generic_photo.png
+            default_image = Image.objects.get(pk=1)
+            p.thumbnail = default_image.thumbnails['admin_sidebar_preview']
+            #p.thumbnail = default_image.thumbnails['admin_directory_listing_icon']
+
     return property_list
 
 
