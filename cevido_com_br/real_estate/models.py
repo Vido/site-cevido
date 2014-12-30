@@ -6,6 +6,7 @@ from django.core.urlresolvers import reverse
 from filer.fields.image import FilerImageField
 from easy_thumbnails.fields import ThumbnailerImageField
 
+from cevido import settings
 
 class Owner(models.Model):
     name = models.CharField(max_length=64)
@@ -84,6 +85,17 @@ class Property(models.Model):
     @models.permalink
     def get_absolute_url(self):
         return ('real_estate.views.re_details', [str(self.pk)])
+
+
+    @property
+    def thumbnail(self):
+        """ Returns the thumbnail url, or the default url. """
+        default_image = 'generic_photo.png'
+        photo_qs = Photo.objects.filter(fk_property=self)
+        if photo_qs:
+           return photo_qs[0].thumbnail.url
+        return settings.STATIC_URL + default_image
+
 
 class Photo(models.Model):
     image_file = FilerImageField()

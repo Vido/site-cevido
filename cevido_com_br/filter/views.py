@@ -5,7 +5,6 @@ import random
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.http import Http404
-from filer.models import Image
 
 from real_estate.models import Property
 from real_estate.models import Photo
@@ -26,22 +25,6 @@ def parse_filter_args(GET, boundaries=[], options=[]):
     }
 
     return filter_kwargs
-
-
-def monkey_patch_thumbnails(property_list):
-    # Workaround to show thumbnail
-    for p in property_list:
-        photo_list = Photo.objects.filter(fk_property=p)
-        if photo_list:
-            p.thumbnail = photo_list[0].thumbnail.url
-        else:
-            # gets generic_photo.png
-            default_image = Image.objects.get(pk=1)
-            p.thumbnail = default_image.thumbnails['admin_sidebar_preview']
-            #p.thumbnail = default_image.thumbnails['admin_directory_listing_icon']
-
-    return property_list
-
 
 def f_select_form(request):
     if not request.method == "GET":
@@ -68,7 +51,6 @@ def generic_boundary_filter(request, boundaries=[],
 
     properties = Property.objects.all().order_by('timestamp')
     properties = properties.filter(**filter_kwargs)
-    properties = monkey_patch_thumbnails(properties)
 
     dictionary = {
        'property_list': properties,
