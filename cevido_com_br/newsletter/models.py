@@ -9,4 +9,3 @@ class Subscriber(models.Model):
     times_sent = models.IntegerField(default=0)
     is_active = models.BooleanField(default=True)
     email = models.EmailField(unique=True, null=False)
-

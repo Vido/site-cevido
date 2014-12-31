@@ -1,5 +1,3 @@
-# Create your views here.
-
 import random
 
 from django.shortcuts import render_to_response
@@ -10,13 +8,11 @@ def home(request):
     template = 'cevido/intro.html'
 
     list_wallpapers = [
-        #'tonight-situation-with-lamp.jpg',
+        # 'tonight-situation-with-lamp.jpg',
         'modern-dining-room2.jpg',
     ]
 
-    dictionary = {
-       'wallpaper': random.choice(list_wallpapers),
-    }
+    dictionary = {'wallpaper': random.choice(list_wallpapers)}
 
     context_instance = RequestContext(request)
 
@@ -29,15 +25,12 @@ def contact(request):
 
     list_wallpapers = [
         'tonight-situation-with-lamp.jpg',
-        #'modern-dining-room2.jpg',
+        # 'modern-dining-room2.jpg',
     ]
 
-    dictionary = {
-       'wallpaper': random.choice(list_wallpapers),
-    }
+    dictionary = {'wallpaper': random.choice(list_wallpapers)}
 
     context_instance = RequestContext(request)
 
     response = render_to_response(template, dictionary, context_instance)
     return response
-

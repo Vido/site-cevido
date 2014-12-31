@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 import json
-import random
 
 from django.shortcuts import render_to_response
 from django.template import RequestContext
@@ -11,7 +10,6 @@ from django.http import Http404
 
 from real_estate.models import Property
 from real_estate.models import Photo
-from filter.models import FilterKind
 from filter.forms import KindForm
 
 
@@ -37,7 +35,7 @@ def re_details(request, property_pk):
     except:
         raise Http404
 
-    context_descr = { 'address': this_property.address, }
+    context_descr = {'address': this_property.address}
     template_descr = u"Olá, tenho interesse no imovel {address}"
     description = template_descr.format(**context_descr)
 
@@ -67,11 +65,11 @@ def re_contact(request, property_pk):
     except:
         raise Http404
 
-    description = request.GET.get('description', None)
-    name = request.GET.get('name', None)
-    email = request.GET.get('email', None)
-    phone = request.GET.get('phone', None)
-    newsletter = request.GET.get('newsletter', True)
+    # description = request.GET.get('description', None)
+    # name = request.GET.get('name', None)
+    # email = request.GET.get('email', None)
+    # phone = request.GET.get('phone', None)
+    # newsletter = request.GET.get('newsletter', True)
 
     # TODO: Send an email or something
     return redirect(property.get_absolute_url())

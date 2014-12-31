@@ -1,19 +1,21 @@
 # -*- coding: utf-8 -*-
 
 from django.db import models
-from django.core.urlresolvers import reverse
 
 from filer.fields.image import FilerImageField
-from easy_thumbnails.fields import ThumbnailerImageField
 
 from cevido import settings
+
 
 class Owner(models.Model):
     name = models.CharField(max_length=64)
     email = models.EmailField(blank=True, null=True)
-    mobile_phone = models.CharField(max_length=20, blank=True, null=True)
-    comercial_phone = models.CharField(max_length=20, blank=True, null=True)
-    residential_phone = models.CharField(max_length=20, blank=True, null=True)
+    mobile_phone = models.CharField(
+        max_length=20, blank=True, null=True)
+    comercial_phone = models.CharField(
+        max_length=20, blank=True, null=True)
+    residential_phone = models.CharField(
+        max_length=20, blank=True, null=True)
 
     def __unicode__(self):
         return self.__repr__()
@@ -62,11 +64,11 @@ class Property(models.Model):
     is_active = models.BooleanField(default=True)
     clicks = models.PositiveIntegerField(editable=False, default=0)
 
-    #def save(self):
-    #    if self.photo_gallery is None:
-    #        # This comes from the initial fixtures
-    #        self.photo_gallery_id = 1
-    #    super(Property, self).save()
+    # def save(self):
+    #     if self.photo_gallery is None:
+    #         # This comes from the initial fixtures
+    #         self.photo_gallery_id = 1
+    #     super(Property, self).save()
 
     def verbose_category(self):
         return dict(Property.CATEGORY)[self.category]
@@ -81,11 +83,9 @@ class Property(models.Model):
         trunc_addr = self.address[:25]
         return "%s %s" % (catg_name, trunc_addr)
 
-
     @models.permalink
     def get_absolute_url(self):
         return ('real_estate.views.re_details', [str(self.pk)])
-
 
     @property
     def thumbnail(self):
@@ -93,7 +93,7 @@ class Property(models.Model):
         default_image = 'generic_photo.png'
         photo_qs = Photo.objects.filter(fk_property=self)
         if photo_qs:
-           return photo_qs[0].thumbnail.url
+            return photo_qs[0].thumbnail.url
         return settings.STATIC_URL + default_image
 
 
@@ -104,5 +104,5 @@ class Photo(models.Model):
     @property
     def thumbnail(self):
         options = {'size': (140, 120), 'crop': True}
-        return self.image_file.easy_thumbnails_thumbnailer.get_thumbnail(options)
-
+        return self.image_file.easy_thumbnails_thumbnailer.get_thumbnail(
+            options)

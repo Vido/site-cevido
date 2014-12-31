@@ -5,11 +5,11 @@ from django.core.urlresolvers import reverse
 
 from newsletter.models import Subscriber
 
-def subscribe(request):
 
+def subscribe(request):
     try:
         email_addr = request.GET.get('email', None)
-        s = Subscriber(email=email)
+        s = Subscriber(email=email_addr)
         s.clean()
     except:
         pass
@@ -21,4 +21,3 @@ def subscribe(request):
 
 def unsubscribe(request):
     return redirect(reverse('cevido.views.contact', kwargs={}))
-

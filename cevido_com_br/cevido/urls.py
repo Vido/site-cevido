@@ -7,7 +7,7 @@ from django.contrib.sites.models import Site
 admin.autodiscover()
 admin.site.unregister(Site)
 
-urlpatterns = patterns('',
+urlpatterns = patterns('',  # noqa
     # Examples:
     # url(r'^$', 'cevido.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
@@ -23,7 +23,7 @@ urlpatterns = patterns('',
 if not settings.PRODUCTION:
     from django import get_version
     if int(get_version().split('.')[1]) >= 6:
-        urlpatterns += patterns('',
+        urlpatterns += patterns('',  # noqa
             url(r'^media/(?P<path>.*)$', 'django.views.static.serve',
                 {'document_root': settings.MEDIA_ROOT}),
             url(r'^static/(?P<path>.*)$', 'django.views.static.serve',
@@ -32,18 +32,18 @@ if not settings.PRODUCTION:
                 {'document_root': settings.STATIC_ROOT}),
         )
     else:
-        urlpatterns += patterns('',
+        urlpatterns += patterns('',  # noqa
             url(r'^media/(?P<path>.*)$', 'django.views.static.serve',
                 {'document_root': settings.MEDIA_ROOT,
-                 'show_indexes' : True}),
+                  'show_indexes': True}),
             url(r'^static/(?P<path>.*)$', 'django.views.static.serve',
                 {'document_root': settings.STATIC_ROOT,
-                 'show_indexes' : True}),
+                  'show_indexes': True}),
             url(r'^admin/static/(?P<path>.*)$', 'django.views.static.serve',
                 {'document_root': settings.STATIC_ROOT,
-                 'show_indexes' : True}),
+                  'show_indexes': True}),
         )
 
-urlpatterns += patterns('',
+urlpatterns += patterns('',  # noqa
     url(r'^admin/', include(admin.site.urls)),
 )
