@@ -8,6 +8,10 @@ from cevido import settings
 
 
 class Owner(models.Model):
+
+    class Meta:
+        ordering = ['name']
+
     name = models.CharField(max_length=64)
     email = models.EmailField(blank=True, null=True)
     mobile_phone = models.CharField(
@@ -16,6 +20,8 @@ class Owner(models.Model):
         max_length=20, blank=True, null=True)
     residential_phone = models.CharField(
         max_length=20, blank=True, null=True)
+    extra_info = models.TextField(
+        blank=True, null=True, verbose_name='Additional Information')
 
     def __unicode__(self):
         return self.__repr__()
@@ -31,6 +37,21 @@ class Owner(models.Model):
         return self.name
 
 
+class City(models.Model):
+
+    class Meta:
+        ordering = ['name']
+
+    name = models.CharField(max_length=64)
+    state = models.CharField(max_length=2)
+
+    def __unicode__(self):
+        return self.__repr__()
+
+    def __repr__(self):
+        return "%s-%s" % (self.name, self.state.upper())
+
+
 class Property(models.Model):
 
     CATEGORY = (
@@ -44,21 +65,23 @@ class Property(models.Model):
     )
 
     owner = models.ForeignKey(Owner)
-    address = models.TextField(null=False)
     category = models.CharField(max_length=1, choices=CATEGORY)
+
+    address = models.CharField(max_length=512, null=False)
+    number = models.CharField(max_length=10, null=True)
+    neighborhood = models.CharField(max_length=512, null=True)
+    city = models.ForeignKey(City)
 
     price = models.PositiveIntegerField()
     condo = models.PositiveIntegerField(default=0)
     rent = models.PositiveIntegerField(default=0)
 
+    description = models.TextField(null=True)
     rooms = models.PositiveIntegerField(default=0)
     wc = models.PositiveIntegerField(default=0)
     garage = models.PositiveIntegerField(default=0)
     area = models.PositiveIntegerField(default=0)
     unit = models.CharField(max_length=10, default='m²')
-
-    city = models.TextField(null=True)
-    neighborhood = models.TextField(null=True)
 
     timestamp = models.DateTimeField(auto_now_add=True)
     is_active = models.BooleanField(default=True)
@@ -78,10 +101,8 @@ class Property(models.Model):
 
     def __repr__(self):
         catg_name = [c for c in self.CATEGORY if c[0] == self.category]
-
         catg_name = catg_name[0][1] if catg_name else "/"
-        trunc_addr = self.address[:25]
-        return "%s %s" % (catg_name, trunc_addr)
+        return "%s %s" % (catg_name, self.address)
 
     @models.permalink
     def get_absolute_url(self):

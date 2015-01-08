@@ -1,0 +1,58 @@
+[
+{
+    "pk": 1,
+    "model": "real_estate.city",
+    "fields": {
+        "state": "SP",
+        "name": "Atibaia"
+    }
+},
+{
+    "pk": 2,
+    "model": "real_estate.city",
+    "fields": {
+        "state": "SP",
+        "name": "Amparo"
+    }
+},
+{
+    "pk": 3,
+    "model": "real_estate.city",
+    "fields": {
+        "state": "SP",
+        "name": "Campos do Jordão"
+    }
+},
+{
+    "pk": 4,
+    "model": "real_estate.city",
+    "fields": {
+        "state": "MT",
+        "name": "Cuiabá"
+    }
+},
+{
+    "pk": 5,
+    "model": "real_estate.city",
+    "fields": {
+        "state": "SP",
+        "name": "Monte Alegre do Sul"
+    }
+},
+{
+    "pk": 6,
+    "model": "real_estate.city",
+    "fields": {
+        "state": "SP",
+        "name": "Louveira"
+    }
+},
+{
+    "pk": 7,
+    "model": "real_estate.city",
+    "fields": {
+        "state": "SP",
+        "name": "São Paulo"
+    }
+}
+]
