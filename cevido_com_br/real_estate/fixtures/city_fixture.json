@@ -20,7 +20,7 @@
     "model": "real_estate.city",
     "fields": {
         "state": "SP",
-        "name": "Campos do Jordão"
+        "name": "Campos do Jord\u00e3o"
     }
 },
 {
@@ -28,7 +28,7 @@
     "model": "real_estate.city",
     "fields": {
         "state": "MT",
-        "name": "Cuiabá"
+        "name": "Cuiab\u00e1"
     }
 },
 {
@@ -52,7 +52,7 @@
     "model": "real_estate.city",
     "fields": {
         "state": "SP",
-        "name": "São Paulo"
+        "name": "S\u00e3o Paulo"
     }
 }
 ]

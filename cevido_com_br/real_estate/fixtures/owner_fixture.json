@@ -1,189 +1,206 @@
 [
 {
-    "pk": 1, 
-    "model": "real_estate.owner", 
+    "pk": 1,
+    "model": "real_estate.owner",
     "fields": {
-        "comercial_phone": "", 
-        "residential_phone": "11 4411-5266", 
-        "mobile_phone": "", 
-        "name": "Benedito Aparecido Furquim / Ana", 
-        "email": ""
+        "comercial_phone": "",
+        "name": "Benedito Aparecido Furquim / Ana",
+        "residential_phone": "11 4411-5266",
+        "mobile_phone": "",
+        "email": "",
+        "extra_info": null
     }
 },
 {
-    "pk": 2, 
-    "model": "real_estate.owner", 
+    "pk": 2,
+    "model": "real_estate.owner",
     "fields": {
-        "comercial_phone": "(19) 9 9796-2249", 
-        "residential_phone": "(19) 3807 2729", 
-        "mobile_phone": "(19) 9 9761-5203", 
-        "name": "Heitor Benedetti / Agnaldo", 
-        "email": ""
+        "comercial_phone": "(19) 9 9796-2249",
+        "name": "Heitor Benedetti / Agnaldo",
+        "residential_phone": "(19) 3807 2729",
+        "mobile_phone": "(19) 9 9761-5203",
+        "email": "",
+        "extra_info": null
     }
 },
 {
-    "pk": 3, 
-    "model": "real_estate.owner", 
+    "pk": 3,
+    "model": "real_estate.owner",
     "fields": {
-        "comercial_phone": "", 
-        "residential_phone": "", 
-        "mobile_phone": "(19) 9 9699-3165", 
-        "name": "Jo\u00e3o", 
-        "email": ""
+        "comercial_phone": "",
+        "name": "Jo\u00e3o",
+        "residential_phone": "",
+        "mobile_phone": "(19) 9 9699-3165",
+        "email": "",
+        "extra_info": null
     }
 },
 {
-    "pk": 4, 
-    "model": "real_estate.owner", 
+    "pk": 4,
+    "model": "real_estate.owner",
     "fields": {
-        "comercial_phone": "", 
-        "residential_phone": "", 
-        "mobile_phone": "(19) 9 9241-9074", 
-        "name": "Toninho Vidraceiro", 
-        "email": ""
+        "comercial_phone": "",
+        "name": "Toninho Vidraceiro",
+        "residential_phone": "",
+        "mobile_phone": "(19) 9 9241-9074",
+        "email": "",
+        "extra_info": null
     }
 },
 {
-    "pk": 5, 
-    "model": "real_estate.owner", 
+    "pk": 5,
+    "model": "real_estate.owner",
     "fields": {
-        "comercial_phone": "", 
-        "residential_phone": "", 
-        "mobile_phone": "(19) 9 9677-6622", 
-        "name": "Rog\u00e9rio (Colega do Michael/Cida)", 
-        "email": ""
+        "comercial_phone": "",
+        "name": "Rog\u00e9rio (Colega do Michael/Cida)",
+        "residential_phone": "",
+        "mobile_phone": "(19) 9 9677-6622",
+        "email": "",
+        "extra_info": null
     }
 },
 {
-    "pk": 6, 
-    "model": "real_estate.owner", 
+    "pk": 6,
+    "model": "real_estate.owner",
     "fields": {
-        "comercial_phone": "", 
-        "residential_phone": "", 
-        "mobile_phone": "(19) 3808-3554", 
-        "name": "Ademir e Marta", 
-        "email": ""
+        "comercial_phone": "",
+        "name": "Ademir e Marta",
+        "residential_phone": "",
+        "mobile_phone": "(19) 3808-3554",
+        "email": "",
+        "extra_info": null
     }
 },
 {
-    "pk": 7, 
-    "model": "real_estate.owner", 
+    "pk": 7,
+    "model": "real_estate.owner",
     "fields": {
-        "comercial_phone": "", 
-        "residential_phone": "", 
-        "mobile_phone": "(19) 9 8122 8203", 
-        "name": "Nelson Godoy", 
-        "email": ""
+        "comercial_phone": "",
+        "name": "Nelson Godoy",
+        "residential_phone": "",
+        "mobile_phone": "(19) 9 8122 8203",
+        "email": "",
+        "extra_info": null
     }
 },
 {
-    "pk": 8, 
-    "model": "real_estate.owner", 
+    "pk": 8,
+    "model": "real_estate.owner",
     "fields": {
-        "comercial_phone": "", 
-        "residential_phone": "(41) 3445 1848", 
-        "mobile_phone": "(41) 9112 9661", 
-        "name": "Carlos (Gugu)", 
-        "email": ""
+        "comercial_phone": "",
+        "name": "Carlos (Gugu)",
+        "residential_phone": "(41) 3445 1848",
+        "mobile_phone": "(41) 9112 9661",
+        "email": "",
+        "extra_info": null
     }
 },
 {
-    "pk": 9, 
-    "model": "real_estate.owner", 
+    "pk": 9,
+    "model": "real_estate.owner",
     "fields": {
-        "comercial_phone": "", 
-        "residential_phone": "(11) 3331-0158", 
-        "mobile_phone": "", 
-        "name": "Dona Vera L. Cruz", 
-        "email": "vlcruz@uol.com.br"
+        "comercial_phone": "",
+        "name": "Dona Vera L. Cruz",
+        "residential_phone": "(11) 3331-0158",
+        "mobile_phone": "",
+        "email": "vlcruz@uol.com.br",
+        "extra_info": null
     }
 },
 {
-    "pk": 10, 
-    "model": "real_estate.owner", 
+    "pk": 10,
+    "model": "real_estate.owner",
     "fields": {
-        "comercial_phone": "", 
-        "residential_phone": "", 
-        "mobile_phone": "(19) 9 9791-9938", 
-        "name": "Jos\u00e9 Gasparini (Serralheiro)", 
-        "email": ""
+        "comercial_phone": "",
+        "name": "Jos\u00e9 Gasparini (Serralheiro)",
+        "residential_phone": "",
+        "mobile_phone": "(19) 9 9791-9938",
+        "email": "",
+        "extra_info": null
     }
 },
 {
-    "pk": 11, 
-    "model": "real_estate.owner", 
+    "pk": 11,
+    "model": "real_estate.owner",
     "fields": {
-        "comercial_phone": "", 
-        "residential_phone": "(19) 3807-0523", 
-        "mobile_phone": "(19) 9 9775-0622", 
-        "name": "Patricia Guerra Gonzales", 
-        "email": ""
+        "comercial_phone": "",
+        "name": "Patricia Guerra Gonzales",
+        "residential_phone": "(19) 3807-0523",
+        "mobile_phone": "(19) 9 9775-0622",
+        "email": "",
+        "extra_info": null
     }
 },
 {
-    "pk": 12, 
-    "model": "real_estate.owner", 
+    "pk": 12,
+    "model": "real_estate.owner",
     "fields": {
-        "comercial_phone": "", 
-        "residential_phone": "", 
-        "mobile_phone": "(19) 9 9797 7276", 
-        "name": "Alexandre (Valinhos Pneus)", 
-        "email": ""
+        "comercial_phone": "",
+        "name": "Alexandre (Valinhos Pneus)",
+        "residential_phone": "",
+        "mobile_phone": "(19) 9 9797 7276",
+        "email": "",
+        "extra_info": null
     }
 },
 {
-    "pk": 13, 
-    "model": "real_estate.owner", 
+    "pk": 13,
+    "model": "real_estate.owner",
     "fields": {
-        "comercial_phone": "", 
-        "residential_phone": "(19) 3807-3127", 
-        "mobile_phone": "", 
-        "name": "Zanella (Bi\u00e1)", 
-        "email": ""
+        "comercial_phone": "",
+        "name": "Zanella (Bi\u00e1)",
+        "residential_phone": "(19) 3807-3127",
+        "mobile_phone": "",
+        "email": "",
+        "extra_info": null
     }
 },
 {
-    "pk": 14, 
-    "model": "real_estate.owner", 
+    "pk": 14,
+    "model": "real_estate.owner",
     "fields": {
-        "comercial_phone": "", 
-        "residential_phone": "", 
-        "mobile_phone": "", 
-        "name": "Tio Fl\u00e1vio Guerra", 
-        "email": ""
+        "comercial_phone": "",
+        "name": "Tio Fl\u00e1vio Guerra",
+        "residential_phone": "",
+        "mobile_phone": "",
+        "email": "",
+        "extra_info": null
     }
 },
 {
-    "pk": 15, 
-    "model": "real_estate.owner", 
+    "pk": 15,
+    "model": "real_estate.owner",
     "fields": {
-        "comercial_phone": "", 
-        "residential_phone": "", 
-        "mobile_phone": "", 
-        "name": "Tia N\u00e1dia", 
-        "email": ""
+        "comercial_phone": "",
+        "name": "Tia N\u00e1dia",
+        "residential_phone": "",
+        "mobile_phone": "",
+        "email": "",
+        "extra_info": null
     }
 },
 {
-    "pk": 16, 
-    "model": "real_estate.owner", 
+    "pk": 16,
+    "model": "real_estate.owner",
     "fields": {
-        "comercial_phone": "", 
-        "residential_phone": "", 
-        "mobile_phone": "", 
-        "name": "Carlos Eduardo Vido", 
-        "email": ""
+        "comercial_phone": "",
+        "name": "Carlos Eduardo Vido",
+        "residential_phone": "",
+        "mobile_phone": "",
+        "email": "",
+        "extra_info": null
     }
 },
 {
-    "pk": 17, 
-    "model": "real_estate.owner", 
+    "pk": 17,
+    "model": "real_estate.owner",
     "fields": {
-        "comercial_phone": "(19) 9 9224-2019 Wal", 
-        "residential_phone": "(19) 3817-3072", 
-        "mobile_phone": "(19) 9 9625-0948", 
-        "name": "Du da Shefa", 
-        "email": ""
+        "comercial_phone": "(19) 9 9224-2019 Wal",
+        "name": "Du da Shefa",
+        "residential_phone": "(19) 3817-3072",
+        "mobile_phone": "(19) 9 9625-0948",
+        "email": "",
+        "extra_info": null
     }
 }
 ]
