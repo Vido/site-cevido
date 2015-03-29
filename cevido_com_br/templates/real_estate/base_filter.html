@@ -25,6 +25,7 @@
         }
     });
 
+    /*
     // Select the filter
     $(function(){
         $("#id_which_kind").change(function(){
@@ -42,17 +43,20 @@
                 }
             });
         });
-    });
+     });
+     */
 
     </script>
 
 {%  endblock %}
 
-{% block pre_filter %}
+{% comment %}
+    {% block pre_filter %}
         <form action="{% url 'real_estate.views.re_index' %}" method="GET">
             {{ form.as_p }}
         </form>
-{% endblock %}
+    {% endblock %}
+{% endcomment %}
 
 {% block filter %}
         <!-- Content made via ajax request to another view -->

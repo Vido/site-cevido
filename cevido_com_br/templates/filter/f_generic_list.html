@@ -1,7 +1,7 @@
 {% load static from staticfiles %}
 {% for property in property_list %}
 <div class="listitem {% cycle 'darkstrip' 'lightstrip'%}">
-    <table>
+    <table class="wide_photo">
         <tr>
             <th rowspan="3" class="">
                 <a href="{{ property.get_absolute_url }}">

@@ -35,8 +35,11 @@ def re_details(request, property_pk):
     except:
         raise Http404
 
-    context_descr = {'address': this_property.address}
-    template_descr = u"Olá, tenho interesse no imovel {address}"
+    context_descr = {
+            'city': this_property.city,
+            'neighborhood': this_property.neighborhood,
+            }
+    template_descr = u"Olá, tenho interesse no imovel em {city}, {neighborhood}"
     description = template_descr.format(**context_descr)
 
     photo_list = Photo.objects.filter(fk_property=this_property)

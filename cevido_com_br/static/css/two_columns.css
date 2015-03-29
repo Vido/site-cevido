@@ -41,7 +41,7 @@ body, html {
 }
 
 #content {
-    width: 70%;
+    width: 100%;
     float: right;
     background:#F0F8FF;
     /*background: #E6E6FA;*/
@@ -63,12 +63,13 @@ body, html {
     border: 1px solid #666666;
 }
 
-
+/*
 #filter {
     width: 30%;
     float: left;
     background: #8FBC8F;
 }
+*/
 
 #footer {
     font-size: 80%;
